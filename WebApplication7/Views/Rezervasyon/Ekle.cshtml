@@ -1,0 +1,85 @@
+﻿@model WebApplication7.Models.RezervasyonViewModel
+<h2>Yeni Rezervasyon Ekle</h2>
+
+<form asp-action="Ekle" method="post" class="rezervasyon-form">
+    <div class="form-group">
+        <label for="Rezervasyon_Ad">Ad:</label>
+        <input asp-for="Rezervasyon.Ad" class="form-input" />
+    </div>
+    <div class="form-group">
+        <label for="Rezervasyon_Soyad">Soyad:</label>
+        <input asp-for="Rezervasyon.Soyad" class="form-input" />
+    </div>
+    <div class="form-group">
+        <label for="Rezervasyon_Tarih">Tarih:</label>
+        <input asp-for="Rezervasyon.Tarih" type="datetime-local" class="form-input" />
+    </div>
+    <div class="form-group">
+        <label for="Rezervasyon_Telefon">Telefon:</label>
+        <input asp-for="Rezervasyon.Telefon" class="form-input" />
+    </div>
+    <button type="submit" class="btn-ekle">Ekle</button>
+</form>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 20px;
+        color: #333;
+    }
+
+    h2 {
+        text-align: center;
+        color: #4CAF50;
+    }
+
+    .rezervasyon-form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+        .form-input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+    .btn-ekle {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 16px;
+    }
+
+        .btn-ekle:hover {
+            background-color: #45a049;
+        }
+</style>

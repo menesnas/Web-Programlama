@@ -1,0 +1,130 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.back {
+    background-color: white; /* Beyaz arka plan rengi */
+    padding: 10px; /* Ýsteðe baðlý olarak iç boþluk ekleyebilirsiniz */
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: dodgerblue; /* Arka plan rengi */
+    color: white; /* Metin rengi beyaz */
+}
+
+.image-text-container {
+    display: flex; /* Flexbox kullanarak yan yana yerleþtirir */
+    align-items: center; /* Dikey olarak ortalar */
+    background-color: white; /* Beyaz arka plan */
+    padding: 20px; /* Ýç boþluk */
+    margin: 0 10%; /* Sol ve saðdan %10 boþluk býrak */
+    border: 1px solid #ccc; /* Kenar çizgisi (isteðe baðlý) */
+    border-radius: 8px; /* Kenarlarý yuvarlama (isteðe baðlý) */
+}
+
+
+.image-container {
+    flex: 1; /* Sol taraf için esnek alan */
+    margin-right: 20px; /* Sað tarafa boþluk ekleyin */
+}
+
+    .image-container img {
+        max-width: 100%; /* Resmi boyutlandýr */
+        height: auto; /* Orantýlý boyutlandýrma */
+        border-radius: 8px; /* Resmi kenarlarýný yuvarlama (isteðe baðlý) */
+    }
+
+.text-container {
+    flex: 2; /* Sað taraf için daha fazla alan */
+}
+.personal-data-box {
+    background-color: #f8f9fa; /* Hafif gri arka plan */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.personal-data-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.image-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.profile-image {
+    width: 300px; /* Geniþlik 150 piksel olarak ayarlandý */
+    height: 300px; /* Yükseklik 150 piksel olarak ayarlandý */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text-container {
+    flex-grow: 1;
+    color: black;
+}
+/* Slayt gösterisi için stil ayarlarý */
+.slideshow-container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 60%; /* Geniþlik %60 */
+    max-width: 600px; /* Maksimum geniþlik 600px */
+    border-radius: 10px; /* Köþeleri yuvarlar */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+    display: none;
+}
+
+.slide-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.fade {
+    animation: fadeEffect 1s ease;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+

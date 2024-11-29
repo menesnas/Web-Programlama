@@ -1,0 +1,141 @@
+﻿<body>
+    <!-- Slayt gösterisi -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="~/images/images3.jpeg" class="slide-image" alt="Slayt 1">
+        </div>
+        <div class="slide fade">
+            <img src="~/images/images2.jpeg" class="slide-image" alt="Slayt 2">
+        </div>
+        <div class="slide fade">
+            <img src="~/images/images1.jpeg" class="slide-image" alt="Slayt 3">
+        </div>
+    </div>
+
+    <!-- Sol tarafa yaslanmış Hizmetler bölümü -->
+    <div class="services-section">
+        <h3>Hizmetlerimiz</h3>
+        <div class="service-item">
+            <img src="~/images/sackesim.jpeg" alt="Saç Kesimi" class="service-icon">
+            <p>Profesyonel saç kesimi ile stilinizi yenileyin.</p>
+        </div>
+        <div class="service-item">
+            <img src="~/images/Bakımlısakal.jpeg" alt="Sakal Tıraşı" class="service-icon">
+            <p>Bakımlı bir sakal görünümü için uzman dokunuşlar.</p>
+        </div>
+        <div class="service-item">
+            <img src="~/images/sacbakim.jpeg" alt="Saç Bakımı" class="service-icon">
+            <p>Saçınızın sağlığını koruyan özel bakım hizmetleri.</p>
+        </div>
+        <div class="service-item">
+            <img src="~/images/yuzbakimi.jpeg" alt="Yüz Bakımı" class="service-icon">
+            <p>Canlandırıcı yüz bakımı ile cildinizi yenileyin.</p>
+        </div>
+        <div class="service-item">
+            <img src="~/images/masaj.jpeg" alt="Baş Masajı" class="service-icon">
+            <p>Baş masajı ile yorgunluğunuzu atın ve rahatlayın.</p>
+        </div>
+    </div>
+
+    <!-- Bizi Neden Seçmelisiniz bölümü -->
+    <div class="content-section">
+        <h2>Bizi Neden Seçmelisiniz?</h2>
+        <p>Berber dükkanımız, en iyi hizmeti sunmak için uzman ekipmanlar ve deneyimli berberlerle donatılmıştır. Sizi rahatlatacak bir atmosfer sunarak, saç kesiminden bakıma kadar her türlü ihtiyacınızı karşılıyoruz.</p>
+        <p>Yüksek kaliteli ürünler kullanarak saçınıza değer katıyoruz. Müşteri memnuniyeti bizim için her şeyden önemlidir, bu nedenle sizi memnun etmek için buradayız!</p>
+    </div>
+    <br />
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+
+    <style>
+        /* Slayt gösterisi */
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+            margin-left: -20px;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Hizmetler bölümü */
+        .services-section {
+            width: 250px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 20px;
+            top: 60px;
+        }
+
+            .services-section h3 {
+                font-size: 20px;
+                color: #333;
+                text-align: left;
+                margin-bottom: 15px;
+            }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .service-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .service-item p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Bizi Neden Seçmelisiniz bölümü */
+        .content-section {
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 700px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+            .content-section h2 {
+                color: #333;
+                margin-bottom: 15px;
+            }
+
+            .content-section p {
+                color: #666;
+                line-height: 1.5;
+                margin: 0 auto;
+            }
+    </style>
+</body>
