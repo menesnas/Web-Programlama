@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O3ep2DZDPc4=",
+  "dgSpecHash": "YsO0tLue3MY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\Yeni klasör\\WebApplication7\\WebApplication7.csproj",
+  "projectFilePath": "C:\\Users\\90531\\Source\\Repos\\Web-Programlama\\WebApplication7\\WebApplication7.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\90531\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\90531\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
