@@ -1,0 +1,29 @@
+﻿@model WebApplication7.Models.Personel
+
+@{
+    ViewData["Title"] = "Yeni Personel Ekle";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+
+<form asp-action="Create" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label for="Ad">Ad:</label>
+        <input type="text" id="Ad" name="Ad" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Soyad">Soyad:</label>
+        <input type="text" id="Soyad" name="Soyad" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="CalistigiSaat">Çalıştığı Saat:</label>
+        <input type="number" id="CalistigiSaat" name="CalistigiSaat" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="GunlukKazandirdigiPara">Günlük Kazandırdığı Para:</label>
+        <input type="number" id="GunlukKazandirdigiPara" name="GunlukKazandirdigiPara" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Personel Ekle</button>
+    <a asp-action="Index" class="btn btn-secondary mt-3">Geri Dön</a>
+</form>

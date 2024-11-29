@@ -17,5 +17,23 @@ namespace WebApplication7.Controllers
         {
             return View(personeller); // Personel listesini view'a gönderiyoruz
         }
+
+        // Yeni personel ekleme formunu gösteren action
+        public IActionResult Create()
+        {
+            return View(); // Create.cshtml sayfasını döner
+        }
+
+        // Formdan gelen bilgileri işleyen action (HTTP POST)
+        [HttpPost]
+        public IActionResult Create(Personel yeniPersonel)
+        {
+            if (ModelState.IsValid)
+            {
+                personeller.Add(yeniPersonel); // Yeni personeli listeye ekle
+                return RedirectToAction("Index"); // Personel listesine yönlendir
+            }
+            return View(yeniPersonel); // Hatalı durum varsa formu tekrar göster
+        }
     }
 }

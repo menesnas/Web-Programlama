@@ -1,80 +1,27 @@
 ﻿@model WebApplication7.Models.LoginViewModel
 
-<h2>Giriş Yap</h2>
+<div class="button-container">
+    <form asp-action="AdminLogin" method="post">
+        <button type="submit" class="btn btn-danger">Admin</button>
+    </form>
 
-@if (ViewData.ModelState.Any(modelState => modelState.Value.Errors.Count > 0))
-{
-    <div style="color: red;">
-        @foreach (var modelState in ViewData.ModelState.Values)
-        {
-            foreach (var error in modelState.Errors)
-            {
-                <p>@error.ErrorMessage</p>
-            }
-        }
-    </div>
-}
+    <form asp-action="UserLogin" method="post">
+        <button type="submit" class="btn btn-primary">Kullanıcı</button>
+    </form>
+</div>
 
-<form asp-action="Login" method="post" class="login-form">
-    <div class="form-group">
-        <label for="userType">Giriş Türü:</label>
-        <select asp-for="UserType" id="userType" class="form-control" onchange="toggleForm()">
-            <option value="Kullanici">Kullanıcı</option>
-            <option value="Admin">Admin</option>
-        </select>
-    </div>
+<style>
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 50px;
+    }
 
-    <div id="kullaniciForm" class="user-form">
-        <h3>Kullanıcı Girişi</h3>
-        <div class="form-group">
-            <label>Ad:</label>
-            <input asp-for="Kullanici.Ad" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label>Soyad:</label>
-            <input asp-for="Kullanici.Soyad" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label>E-posta:</label>
-            <input asp-for="Kullanici.Email" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label>Şifre:</label>
-            <input asp-for="Kullanici.Sifre" type="password" class="form-control" />
-        </div>
-    </div>
+    .btn {
+        padding: 15px 30px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+</style>
 
-    <div id="adminForm" class="admin-form" style="display:none;">
-        <h3>Admin Girişi</h3>
-        <div class="form-group">
-            <label>Ad:</label>
-            <input asp-for="Admin.Ad" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label>Soyad:</label>
-            <input asp-for="Admin.Soyad" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label>E-posta:</label>
-            <input asp-for="Admin.Email" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label>Şifre:</label>
-            <input asp-for="Admin.Sifre" type="password" class="form-control" />
-        </div>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Giriş Yap</button>
-</form>
-
-@section Scripts {
-    <script>
-        function toggleForm() {
-            const userType = document.getElementById('userType').value;
-            document.getElementById('kullaniciForm').style.display = userType === 'Kullanici' ? 'block' : 'none';
-            document.getElementById('adminForm').style.display = userType === 'Admin' ? 'block' : 'none';
-        }
-
-        toggleForm();
-    </script>
-}

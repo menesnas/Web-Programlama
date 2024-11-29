@@ -9,7 +9,7 @@ namespace WebApplication7.Models
         public string Soyad { get; set; }
         public DateTime Tarih { get; set; }
         public string Telefon { get; set; }
-
+        public Personel personel { get; set; }
       
     }
 
