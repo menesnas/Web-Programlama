@@ -1,27 +1,36 @@
-﻿@{
-    Layout = null;
-}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kayıt Ol - M.E.N. Barber</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <style>
-        body {
-            padding: 20px;
-            background-color: #000;
-            color: white;
-        }
+﻿@model WebApplication7.Models.Kullanici
 
-        h2 {
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <h2>Kayıt Ol</h2>
-    <p>Bu sayfa, kayıt işlemleri için hazırlanmıştır.</p>
-</body>
-</html>
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}
+
+<form asp-action="KullaniciKayit" method="post">
+    <div>
+        <label asp-for="Ad"></label>
+        <input asp-for="Ad" />
+        <span asp-validation-for="Ad" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Soyad"></label>
+        <input asp-for="Soyad" />
+        <span asp-validation-for="Soyad" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Mail"></label>
+        <input asp-for="Mail" />
+        <span asp-validation-for="Mail" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Sifre"></label>
+        <input asp-for="Sifre" type="password" />
+        <span asp-validation-for="Sifre" class="text-danger"></span>
+    </div>
+    <button type="submit">Kayıt Ol</button>
+</form>

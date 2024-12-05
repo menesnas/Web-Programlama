@@ -1,0 +1,32 @@
+﻿@model WebApplication7.Models.Personel
+
+@{
+    ViewData["Title"] = "Personel Düzenle";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+
+<form asp-action="Edit" method="post" class="form-horizontal">
+    <!-- Gizli input ile ID'yi gönderiyoruz -->
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label for="Ad">Ad:</label>
+        <input type="text" id="Ad" asp-for="Ad" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="Soyad">Soyad:</label>
+        <input type="text" id="Soyad" asp-for="Soyad" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="CalistigiSaat">Çalıştığı Saat:</label>
+        <input type="number" id="CalistigiSaat" asp-for="CalistigiSaat" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="GunlukKazandirdigiPara">Günlük Kazandırdığı Para:</label>
+        <input type="number" id="GunlukKazandirdigiPara" asp-for="GunlukKazandirdigiPara" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Kaydet</button>
+    <a asp-action="Index" class="btn btn-secondary mt-3">Geri Dön</a>
+</form>

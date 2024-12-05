@@ -4,17 +4,20 @@ namespace WebApplication7.Models
 {
     public class Kullanici
     {
-        [Required(ErrorMessage = "Lütfen İsminizi Giriniz")]
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Ad alanı zorunludur.")]
         public string Ad { get; set; }
 
-
-        [Required(ErrorMessage = "Lütfen Soyisminizi Giriniz")]
+        [Required(ErrorMessage = "Soyad alanı zorunludur.")]
         public string Soyad { get; set; }
 
-        [EmailAddress(ErrorMessage = "Geçerli Mail Adresi Giriniz")]
-        public string Email { get; set; }
+        [Required(ErrorMessage = "Mail alanı zorunludur.")]
+        [EmailAddress(ErrorMessage = "Geçersiz e-posta adresi.")]
+        public string Mail { get; set; }
 
-        [MinLength(8)]
+        [Required(ErrorMessage = "Şifre alanı zorunludur.")]
+        [DataType(DataType.Password)]
         public string Sifre { get; set; }
     }
 }

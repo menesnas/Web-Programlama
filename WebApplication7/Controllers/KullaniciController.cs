@@ -1,44 +1,68 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication7.Models;
+using System.Linq;
 
 namespace WebApplication7.Controllers
 {
     public class KullaniciController : Controller
     {
+        private readonly KullaniciDbContext _context;
 
-    public IActionResult UserPanel()
-    {
-        return View(); // Bu View, "Views/Kullanici/UserPanel.cshtml" yolunda olmalı
-    }
-        // Kullanıcı giriş işlemi (Giriş Yap butonu)
+        public KullaniciController(KullaniciDbContext context)
+        {
+            _context = context;
+        }
+
+        public IActionResult UserPanel()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult KullaniciGiris(string action, string Mail, string Sifre)
         {
             if (action == "Giris")
             {
-                // Giriş yap butonuna basıldığında ana sayfaya yönlendirme
-                return RedirectToAction("Index", "Home");
+                if (string.IsNullOrEmpty(Mail) || string.IsNullOrEmpty(Sifre))
+                {
+                    ViewBag.ErrorMessage = "Lütfen tüm alanları doldurun.";
+                    return View("UserPanel");
+                }
+
+                // Kullanıcıyı veritabanında kontrol et
+                var kullanici = _context.Kullanicilar.FirstOrDefault(k => k.Mail == Mail && k.Sifre == Sifre);
+                if (kullanici != null)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+
+                ViewBag.ErrorMessage = "Hatalı e-posta veya şifre.";
+                return View("UserPanel");
             }
             else if (action == "Kayit")
             {
-                // Kayıt ol butonuna basıldığında kayıt sayfasına yönlendirme
                 return RedirectToAction("KayitOl");
             }
 
-            return View("UserPanel"); // Varsayılan olarak aynı sayfaya dön
+            return View("UserPanel");
         }
 
-
-        // Kayıt ol işlemi (Kayıt Ol butonu)
         [HttpPost]
-        public IActionResult KullaniciKayit()
+        public IActionResult KullaniciKayit(Kullanici yeniKullanici)
         {
-            // Kullanıcı kayıt işlemleri
-            return RedirectToAction("KayitOl", "Kullanici"); // Kayıt ol sayfasına yönlendir
+            if (ModelState.IsValid)
+            {
+                _context.Kullanicilar.Add(yeniKullanici);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View("KayitOl");
         }
 
         public IActionResult KayitOl()
         {
-            return View("Index", "Home"); // Kayıt ol sayfasını döndür
+            return View();
         }
     }
 }
