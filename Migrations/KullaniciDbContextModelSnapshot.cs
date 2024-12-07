@@ -38,7 +38,8 @@ namespace WebApplication7.Migrations
 
                     b.Property<string>("Sifre")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Soyad")
                         .IsRequired()
@@ -46,7 +47,7 @@ namespace WebApplication7.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Kullanicilar");
+                    b.ToTable("Kullanicilar", (string)null);
                 });
 #pragma warning restore 612, 618
         }

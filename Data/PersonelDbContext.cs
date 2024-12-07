@@ -7,4 +7,6 @@ public class PersonelDbContext : DbContext
         : base(options) { }
 
     public DbSet<Personel> Personeller { get; set; }
+    public DbSet<Rezervasyon> Rezervasyonlar { get; set; } // Rezervasyon tablosu
+
 }

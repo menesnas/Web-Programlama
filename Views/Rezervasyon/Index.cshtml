@@ -11,7 +11,7 @@
             <th>Telefon</th>
         </tr>
     </thead>
-    <tbody>
+    <body>
         @foreach (var rezervasyon in Model)
         {
             <tr>
@@ -21,12 +21,13 @@
                 <td>@rezervasyon.Telefon</td>
             </tr>
         }
-    </tbody>
+    </body>
 </table>
 
 <a href="/Rezervasyon/Ekle" class="btn-ekle">Yeni Rezervasyon Ekle</a>
 
 <style>
+    /* Stil tanımlamaları */
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
@@ -47,20 +48,20 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .rezervasyon-table th, .rezervasyon-table td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
+        .rezervasyon-table th, .rezervasyon-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
 
-    .rezervasyon-table th {
-        background-color: #4CAF50;
-        color: white;
-    }
+        .rezervasyon-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
 
-    .rezervasyon-table tr:hover {
-        background-color: #f1f1f1;
-    }
+        .rezervasyon-table tr:hover {
+            background-color: #f1f1f1;
+        }
 
     .btn-ekle {
         display: inline-block;
@@ -74,7 +75,7 @@
         transition: background-color 0.3s;
     }
 
-    .btn-ekle:hover {
-        background-color: #45a049;
-    }
+        .btn-ekle:hover {
+            background-color: #45a049;
+        }
 </style>

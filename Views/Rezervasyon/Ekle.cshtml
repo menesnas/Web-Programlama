@@ -1,159 +1,85 @@
 ﻿@model WebApplication7.Models.RezervasyonViewModel
 
-<div class="container">
-    <h1 class="title">Saç Kesim Atölyesi Rezervasyonu</h1>
+<h2>Yeni Rezervasyon Ekle</h2>
 
-    <!-- Hizmet Seçimi -->
-    <div class="section">
-        <h2>1. Hizmet Seçimi</h2>
-        <button class="btn-add-service">Ekle/Çıkar</button>
+<form method="post">
+    <div>
+        <label for="Ad">Ad:</label>
+        <input type="text" id="Ad" name="Rezervasyon.Ad" value="@Model.Rezervasyon.Ad" required />
     </div>
-
-    <!-- Personel Seçimi -->
-    <div class="section">
-        <h2>2. Personel Seçimi</h2>
-        <label for="personel">Saç kesimi için personel seçiniz:</label>
-        <select id="personel" asp-for="Rezervasyon.personel" class="form-input">
-            <option value="Kürşat Aras">Kürşat Aras</option>
-            <option value="Mehmet Yılmaz">Mehmet Yılmaz</option>
-            <option value="Ayşe Kaya">Ayşe Kaya</option>
+    <div>
+        <label for="Soyad">Soyad:</label>
+        <input type="text" id="Soyad" name="Rezervasyon.Soyad" value="@Model.Rezervasyon.Soyad" required />
+    </div>
+    <div>
+        <label for="Telefon">Telefon:</label>
+        <input type="text" id="Telefon" name="Rezervasyon.Telefon" value="@Model.Rezervasyon.Telefon" required />
+    </div>
+    <div>
+        <label for="Tarih">Tarih:</label>
+        <input type="datetime-local" id="Tarih" name="Rezervasyon.Tarih" value="@Model.Rezervasyon.Tarih.ToString("yyyy-MM-ddTHH:mm")" required />
+    </div>
+    <div>
+        <label for="Personel">Personel Seçin:</label>
+        <select id="Personel" name="Rezervasyon.PersonelId">
+            @foreach (var personel in Model.Personeller)
+            {
+                <option value="@personel.Id">@personel.Ad</option>
+            }
         </select>
     </div>
-
-    <!-- Tarih Seçimi -->
-    <div class="section">
-        <h2>3. Tarih Seçimi</h2>
-        <input asp-for="Rezervasyon.Tarih" type="date" class="form-input" />
-    </div>
-
-    <!-- Saat Seçimi -->
-    <div class="section">
-        <h2>4. Saat Seçimi</h2>
-        <div class="time-selection">
-            <button class="time-btn">09:00</button>
-            <button class="time-btn">10:00</button>
-            <button class="time-btn">10:30</button>
-            <button class="time-btn">12:00</button>
-            <button class="time-btn">14:00</button>
-        </div>
-    </div>
-
-    <!-- Özet -->
-    <div class="summary">
-        <h3>- Özet -</h3>
-        <p>Salon: Saç Kesim Atölyesi Kürşat Aras</p>
-        <p>Hizmetler: Saç Kesimi</p>
-        <p>Personel: -</p>
-        <p>Tarih: -</p>
-        <p>Saat: -</p>
-    </div>
-
-    <!-- Gönder -->
-    <form asp-action="Ekle" method="post" class="submit-form">
-        <button type="submit" class="btn-submit">Rezervasyonu Kaydet</button>
-    </form>
-</div>
+    <button type="submit">Kaydet</button>
+</form>
 
 <style>
+    /* Stil tanımlamaları */
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
-        margin: 0;
-        padding: 20px;
+        margin: 20px;
         color: #333;
     }
 
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-    }
-
-    .title {
-        text-align: center;
+    h2 {
         color: #4CAF50;
     }
 
-    .section {
-        margin-bottom: 20px;
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: 0 auto;
     }
 
-        .section h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+    form div {
+        margin-bottom: 15px;
+    }
 
-    .form-input {
+    label {
+        font-weight: bold;
+        display: block;
+    }
+
+    input, select {
         width: 100%;
-        padding: 10px;
+        padding: 8px;
+        margin-top: 5px;
         border: 1px solid #ccc;
         border-radius: 5px;
     }
 
-        .form-input:focus {
-            border-color: #4CAF50;
-            outline: none;
-        }
-
-    .btn-add-service, .btn-submit {
-        display: block;
+    button {
         width: 100%;
         padding: 10px;
         background-color: #4CAF50;
         color: white;
         border: none;
         border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        margin-top: 10px;
     }
 
-        .btn-add-service:hover, .btn-submit:hover {
-            background-color: #45a049;
-        }
-
-    .time-selection {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
+    button:hover {
+        background-color: #45a049;
     }
-
-    .time-btn {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        background-color: #e0e0e0;
-        cursor: pointer;
-    }
-
-        .time-btn.selected {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .time-btn:hover {
-            background-color: #d6d6d6;
-        }
-
-    .summary {
-        margin-top: 30px;
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        padding: 15px;
-        border-radius: 5px;
-    }
-
-        .summary h3 {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .summary p {
-            font-size: 14px;
-            margin: 5px 0;
-        }
 </style>

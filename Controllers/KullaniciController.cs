@@ -47,19 +47,31 @@ namespace WebApplication7.Controllers
             return View("UserPanel");
         }
 
+        // Kullanıcı Kayıt İşlemi
         [HttpPost]
         public IActionResult KullaniciKayit(Kullanici yeniKullanici)
         {
             if (ModelState.IsValid)
             {
+                // E-posta zaten var mı kontrol et
+                var kullaniciVarMi = _context.Kullanicilar.Any(k => k.Mail == yeniKullanici.Mail);
+                if (kullaniciVarMi)
+                {
+                    ViewBag.ErrorMessage = "Bu e-posta adresi zaten kayıtlı.";
+                    return View("KayitOl");
+                }
+
+                // Yeni kullanıcıyı veritabanına ekleyin
                 _context.Kullanicilar.Add(yeniKullanici);
                 _context.SaveChanges();
                 return RedirectToAction("Index", "Home");
             }
 
+            // Model geçerli değilse, hata mesajlarını göster ve tekrar kayıt formuna dön
             return View("KayitOl");
         }
 
+        // Kayıt Ol Sayfası
         public IActionResult KayitOl()
         {
             return View();

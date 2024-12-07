@@ -6,18 +6,18 @@ namespace WebApplication7.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Ad alanı zorunludur.")]
+        [Required(ErrorMessage = "Ad gereklidir.")]
         public string Ad { get; set; }
 
-        [Required(ErrorMessage = "Soyad alanı zorunludur.")]
+        [Required(ErrorMessage = "Soyad gereklidir.")]
         public string Soyad { get; set; }
 
-        [Required(ErrorMessage = "Mail alanı zorunludur.")]
-        [EmailAddress(ErrorMessage = "Geçersiz e-posta adresi.")]
+        [Required(ErrorMessage = "E-posta gereklidir.")]
+        [EmailAddress(ErrorMessage = "Geçerli bir e-posta adresi girin.")]
         public string Mail { get; set; }
 
-        [Required(ErrorMessage = "Şifre alanı zorunludur.")]
-        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "Şifre gereklidir.")]
+        [StringLength(100, MinimumLength = 6, ErrorMessage = "Şifre en az 6 karakter olmalıdır.")]
         public string Sifre { get; set; }
     }
 }

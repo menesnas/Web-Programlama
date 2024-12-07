@@ -1,21 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication7.Models;
+using System.Collections.Generic;
 
 public class RezervasyonController : Controller
 {
-    private static List<Rezervasyon> _rezervasyonlar = new List<Rezervasyon>();
+    // Bellekte tutulacak rezervasyonlar listesi
+    private static List<Rezervasyon> rezervasyonlar = new List<Rezervasyon>();
 
+    // Rezervasyonları listelemek için
     public IActionResult Index()
     {
-        return View(_rezervasyonlar);
+        return View(rezervasyonlar); // Bellekteki rezervasyonları gösteriyoruz
     }
 
+    // Rezervasyon eklemek için
     public IActionResult Ekle()
     {
         var viewModel = new RezervasyonViewModel
         {
-            Rezervasyon = new Rezervasyon()
-            // SacModelleri yüklemeye gerek yok
+            Rezervasyon = new Rezervasyon(),
+            // Personel listesini sabit olarak tanımlıyoruz (örnek)
+            Personeller = new List<Personel>
+            {
+                new Personel { Id = 1, Ad = "Kürşat Aras" },
+                new Personel { Id = 2, Ad = "Mehmet Yılmaz" },
+                new Personel { Id = 3, Ad = "Ayşe Kaya" }
+            }
         };
 
         return View(viewModel);
@@ -26,10 +36,18 @@ public class RezervasyonController : Controller
     {
         if (ModelState.IsValid)
         {
-            _rezervasyonlar.Add(viewModel.Rezervasyon); // Rezervasyonu kaydediyoruz
+            // Bellekteki rezervasyonlar listesine yeni rezervasyonu ekliyoruz
+            rezervasyonlar.Add(viewModel.Rezervasyon);
             return RedirectToAction("Index");
         }
 
-        return View(viewModel); // Hatalı durum için
+        // Hatalı durumda Personel listesini tekrar yükleyip formu geri gönderiyoruz
+        viewModel.Personeller = new List<Personel>
+        {
+            new Personel { Id = 1, Ad = "Kürşat Aras" },
+            new Personel { Id = 2, Ad = "Mehmet Yılmaz" },
+            new Personel { Id = 3, Ad = "Ayşe Kaya" }
+        };
+        return View(viewModel);
     }
 }
