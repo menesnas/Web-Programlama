@@ -2,37 +2,38 @@
 
 <h2>Yeni Rezervasyon Ekle</h2>
 
-<form method="post">
-    <div>
-        <label for="Ad">Ad:</label>
-        <input type="text" id="Ad" name="Rezervasyon.Ad" value="@Model.Rezervasyon.Ad" required />
+<form asp-action="Ekle" method="post">
+    <div class="form-group">
+        <label asp-for="Rezervasyon.Ad">Ad</label>
+        <input asp-for="Rezervasyon.Ad" class="form-control" />
     </div>
-    <div>
-        <label for="Soyad">Soyad:</label>
-        <input type="text" id="Soyad" name="Rezervasyon.Soyad" value="@Model.Rezervasyon.Soyad" required />
+    <div class="form-group">
+        <label asp-for="Rezervasyon.Soyad">Soyad</label>
+        <input asp-for="Rezervasyon.Soyad" class="form-control" />
     </div>
-    <div>
-        <label for="Telefon">Telefon:</label>
-        <input type="text" id="Telefon" name="Rezervasyon.Telefon" value="@Model.Rezervasyon.Telefon" required />
+    <div class="form-group">
+        <label asp-for="Rezervasyon.Tarih">Tarih</label>
+        <input asp-for="Rezervasyon.Tarih" type="datetime-local" class="form-control" />
     </div>
-    <div>
-        <label for="Tarih">Tarih:</label>
-        <input type="datetime-local" id="Tarih" name="Rezervasyon.Tarih" value="@Model.Rezervasyon.Tarih.ToString("yyyy-MM-ddTHH:mm")" required />
+    <div class="form-group">
+        <label asp-for="Rezervasyon.Telefon">Telefon</label>
+        <input asp-for="Rezervasyon.Telefon" class="form-control" />
     </div>
-    <div>
-        <label for="Personel">Personel Seçin:</label>
-        <select id="Personel" name="Rezervasyon.PersonelId">
-            @foreach (var personel in Model.Personeller)
-            {
-                <option value="@personel.Id">@personel.Ad</option>
-            }
+
+    <!-- Personel Seçimi -->
+    <div class="form-group">
+        <label for="SecilenPersonelId">Personel Seç</label>
+        <select asp-for="SecilenPersonelId" class="form-control" asp-items="@(new SelectList(Model.Personeller, "Id", "AdSoyad"))">
+            <option value="">Personel Seçiniz</option>
         </select>
     </div>
-    <button type="submit">Kaydet</button>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
 </form>
 
+
+
 <style>
-    /* Stil tanımlamaları */
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
@@ -41,45 +42,56 @@
     }
 
     h2 {
+        text-align: center;
         color: #4CAF50;
     }
 
-    form {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        max-width: 500px;
+    .rezervasyon-form {
+        max-width: 400px;
         margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
     }
 
-    form div {
+    .form-group {
         margin-bottom: 15px;
     }
 
     label {
-        font-weight: bold;
         display: block;
+        margin-bottom: 5px;
+        color: #555;
     }
 
-    input, select {
+    .form-input {
         width: 100%;
-        padding: 8px;
-        margin-top: 5px;
+        padding: 10px;
         border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 4px;
+        box-sizing: border-box;
     }
 
-    button {
+        .form-input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+    .btn-ekle {
         width: 100%;
         padding: 10px;
         background-color: #4CAF50;
         color: white;
         border: none;
         border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 16px;
     }
 
-    button:hover {
-        background-color: #45a049;
-    }
+        .btn-ekle:hover {
+            background-color: #45a049;
+        }
 </style>

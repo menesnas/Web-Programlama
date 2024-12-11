@@ -17,5 +17,6 @@ namespace WebApplication7.Models
 
         [Required]
         public string GunlukKazandirdigiPara { get; set; }
+
     }
 }

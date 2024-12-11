@@ -1,33 +1,46 @@
-﻿@model List<WebApplication7.Models.Rezervasyon>
+﻿
+@model List<WebApplication7.Models.Rezervasyon>
 
-<h2>Rezervasyon Listesi</h2>
+@if (Model == null || !Model.Any())
+{
+    <p>Henüz rezervasyon yok.</p>
+}
+else
+{
+    <h2>Rezervasyon Listesi</h2>
 
-<table class="rezervasyon-table">
-    <thead>
-        <tr>
-            <th>Ad</th>
-            <th>Soyad</th>
-            <th>Tarih</th>
-            <th>Telefon</th>
-        </tr>
-    </thead>
-    <body>
-        @foreach (var rezervasyon in Model)
-        {
+    <table>
+        <thead>
             <tr>
-                <td>@rezervasyon.Ad</td>
-                <td>@rezervasyon.Soyad</td>
-                <td>@rezervasyon.Tarih.ToString("dd/MM/yyyy HH:mm")</td>
-                <td>@rezervasyon.Telefon</td>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Tarih</th>
+                <th>Telefon</th>
+                <th>Personel Ad</th>
+                <th>Personel Soyad</th>
             </tr>
-        }
-    </body>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var rezervasyon in Model)
+            {
+                <tr>
+                    <td>@rezervasyon.Ad</td>
+                    <td>@rezervasyon.Soyad</td>
+                    <td>@rezervasyon.Tarih.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@rezervasyon.Telefon</td>
+                    <td>@rezervasyon.Personel.Ad</td>
+                    <td>@rezervasyon.Personel.Soyad</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
 <a href="/Rezervasyon/Ekle" class="btn-ekle">Yeni Rezervasyon Ekle</a>
 
+
+
 <style>
-    /* Stil tanımlamaları */
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;

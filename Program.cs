@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
+
 namespace WebApplication7
 {
     public class Program
@@ -17,6 +18,9 @@ namespace WebApplication7
 
             builder.Services.AddDbContext<KullaniciDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("KullaniciConnection")));
+
+            builder.Services.AddDbContext<RezervasyonDbContext>(options =>
+                  options.UseSqlServer(builder.Configuration.GetConnectionString("RezervasyonConnection")));
 
 
             var app = builder.Build();

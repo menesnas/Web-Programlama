@@ -1,13 +1,18 @@
-﻿namespace WebApplication7.Models
+﻿using WebApplication7.Models;
+
+
+namespace WebApplication7.Models
 {
     public class RezervasyonViewModel
     {
-     
-            public Rezervasyon Rezervasyon { get; set; }
-            public List<Personel> Personeller { get; set; } // Personel listesini ekliyoruz
-        }
+        public int? SecilenPersonelId { get; set; }
+        public Rezervasyon Rezervasyon { get; set; }
 
+        public List<Personel> Personeller { get; set; }
 
+        public bool IsValidPersonelId => SecilenPersonelId.HasValue;
     }
+
+}
 
 
