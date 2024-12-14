@@ -1,30 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebApplication7.Models;  // Personel modelini kullanmak için
+using WebApplication7.Models; // Personel modelini kullanmak için
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using WebApplication7.Data;
 
 namespace WebApplication7.Controllers
 {
     public class PersonelController : Controller
     {
-        private readonly PersonelDbContext _context;
+        private readonly MyCustomDbContext _context;
 
         // Constructor ile ApplicationDbContext'i enjekte ediyoruz
-        public PersonelController(PersonelDbContext context)
+        public PersonelController(MyCustomDbContext context)
         {
-            _context = context;
+            _context = context; // ApplicationDbContext ile veritabanı bağlantısı sağlanıyor
         }
 
+        // Personelleri listeleme (Index)
         public IActionResult Index()
         {
-            var personeller = _context.Personeller.ToList(); // Veritabanındaki personelleri al
+            var personeller = _context.Personeller.ToList(); // Veritabanındaki tüm personelleri al
             return View(personeller); // Personel listesini view'a gönder
         }
 
+        // Yeni personel ekleme formunu gösterme
         public IActionResult Create()
         {
             return View(); // Create.cshtml sayfasını döner
         }
 
+        // Yeni personel ekleme işlemi
         [HttpPost]
         public IActionResult Create(Personel yeniPersonel)
         {
@@ -37,7 +42,7 @@ namespace WebApplication7.Controllers
             return View(yeniPersonel); // Hatalı durum varsa formu tekrar göster
         }
 
-        // Düzenleme formunu gösteren action
+        // Personel düzenleme formunu gösterme
         public IActionResult Edit(int id)
         {
             var personel = _context.Personeller.Find(id); // Veritabanından personeli bul
@@ -48,7 +53,7 @@ namespace WebApplication7.Controllers
             return View(personel); // Düzenleme formunu göster
         }
 
-        // Düzenleme işlemini işleyen action
+        // Personel düzenleme işlemi
         [HttpPost]
         public IActionResult Edit(Personel guncellenenPersonel)
         {
@@ -72,7 +77,7 @@ namespace WebApplication7.Controllers
             return View(guncellenenPersonel); // Hatalı durum varsa formu tekrar göster
         }
 
-        // Silme işlemini gerçekleştiren action
+        // Personel silme işlemi
         public IActionResult Delete(int id)
         {
             var personel = _context.Personeller.Find(id); // Veritabanından personeli bul
@@ -84,7 +89,7 @@ namespace WebApplication7.Controllers
             _context.Personeller.Remove(personel); // Personeli sil
             _context.SaveChanges(); // Değişiklikleri kaydet
 
-            return RedirectToAction("Index"); // Listeye geri dön
+            return RedirectToAction("Index"); // Personel listesini göster
         }
     }
 }

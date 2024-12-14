@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\WebApplication7\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebApplication7.bundle.scp.css",
-      "PackagePath": "staticwebassets\\WebApplication7.bundle.scp.css"
+      "PackagePath": "staticwebassets\\WebApplication7.2o73g3qfud.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\WebApplication7\\wwwroot\\css\\site.css",
@@ -267,6 +267,10 @@
     {
       "Id": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\WebApplication7\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebApplication7.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebApplication7.Microsoft.AspNetCore.StaticWebAssets.props",

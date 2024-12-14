@@ -2,36 +2,57 @@
 
 <h2>Yeni Rezervasyon Ekle</h2>
 
-<form asp-action="Ekle" method="post">
-    <div class="form-group">
-        <label asp-for="Rezervasyon.Ad">Ad</label>
-        <input asp-for="Rezervasyon.Ad" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Rezervasyon.Soyad">Soyad</label>
-        <input asp-for="Rezervasyon.Soyad" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Rezervasyon.Tarih">Tarih</label>
-        <input asp-for="Rezervasyon.Tarih" type="datetime-local" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Rezervasyon.Telefon">Telefon</label>
-        <input asp-for="Rezervasyon.Telefon" class="form-control" />
+<form asp-action="Ekle" asp-controller="Rezervasyon" method="post">
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div style="color: red;">
+            <ul>
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <li>@error.ErrorMessage</li>
+                }
+            </ul>
+        </div>
+    }
+
+    <div>
+        <label for="Ad">Ad</label>
+        <input type="text" id="Ad" name="Rezervasyon.Ad" value="@Model.Rezervasyon.Ad" required />
     </div>
 
-    <!-- Personel Seçimi -->
-    <div class="form-group">
-        <label for="SecilenPersonelId">Personel Seç</label>
-        <select asp-for="SecilenPersonelId" class="form-control" asp-items="@(new SelectList(Model.Personeller, "Id", "AdSoyad"))">
-            <option value="">Personel Seçiniz</option>
+    <div>
+        <label for="Soyad">Soyad</label>
+        <input type="text" id="Soyad" name="Rezervasyon.Soyad" value="@Model.Rezervasyon.Soyad" required />
+    </div>
+
+    <div>
+        <label for="Tarih">Tarih</label>
+        <input type="datetime-local" id="Tarih" name="Rezervasyon.Tarih" value="@Model.Rezervasyon.Tarih.ToString("yyyy-MM-ddTHH:mm")" required />
+    </div>
+
+    <div>
+        <label for="Telefon">Telefon</label>
+        <input type="tel" id="Telefon" name="Rezervasyon.Telefon" value="@Model.Rezervasyon.Telefon" required />
+    </div>
+
+    <div>
+        <label for="PersonelId">Personel</label>
+        <select id="PersonelId" name="Rezervasyon.PersonelId" required>
+            <option value="">Lütfen bir personel seçin</option>
+            @foreach (var personeller in Model.Personeller)
+            {
+                <option value="@personeller.Id" 
+                        (personeller.Id = Model.Rezervasyon.PersonelId )>
+                    @personeller.Ad @personeller.Soyad
+                </option>
+            }
         </select>
     </div>
 
-    <button type="submit" class="btn btn-primary">Ekle</button>
+    <button type="submit">Rezervasyon Ekle</button>
 </form>
 
-
+<a href="/Rezervasyon/Index" class="btn-back">Rezervasyon Listesine Dön</a>
 
 <style>
     body {
@@ -46,52 +67,43 @@
         color: #4CAF50;
     }
 
-    .rezervasyon-form {
-        max-width: 400px;
+    form {
+        max-width: 500px;
         margin: 0 auto;
+        background: #fff;
         padding: 20px;
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
-    .form-group {
+    form div {
         margin-bottom: 15px;
     }
 
-    label {
+    form label {
         display: block;
         margin-bottom: 5px;
-        color: #555;
+        font-weight: bold;
     }
 
-    .form-input {
+    form input, form select, form button {
         width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
-        .form-input:focus {
-            border-color: #4CAF50;
-            outline: none;
-            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-        }
-
-    .btn-ekle {
-        width: 100%;
-        padding: 10px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
+        padding: 8px;
         font-size: 16px;
     }
 
-        .btn-ekle:hover {
-            background-color: #45a049;
-        }
+    .btn-back {
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #4CAF50;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .btn-back:hover {
+        background-color: #45a049;
+    }
 </style>

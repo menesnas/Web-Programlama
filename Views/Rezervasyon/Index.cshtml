@@ -1,5 +1,4 @@
-﻿
-@model List<WebApplication7.Models.Rezervasyon>
+﻿@model List<WebApplication7.Models.Rezervasyon>
 
 @if (Model == null || !Model.Any())
 {
@@ -9,7 +8,7 @@ else
 {
     <h2>Rezervasyon Listesi</h2>
 
-    <table>
+    <table class="rezervasyon-table">
         <thead>
             <tr>
                 <th>Ad</th>
@@ -26,10 +25,10 @@ else
                 <tr>
                     <td>@rezervasyon.Ad</td>
                     <td>@rezervasyon.Soyad</td>
-                    <td>@rezervasyon.Tarih.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@rezervasyon.Tarih.ToString("dd/MM/yyyy HH:mm") ?? "Tarih Belirtilmemiş"</td>
                     <td>@rezervasyon.Telefon</td>
-                    <td>@rezervasyon.Personel.Ad</td>
-                    <td>@rezervasyon.Personel.Soyad</td>
+                    <td>@rezervasyon.Personel?.Ad ?? "Belirtilmemiş"</td>
+                    <td>@rezervasyon.Personel?.Soyad ?? "Belirtilmemiş"</td>
                 </tr>
             }
         </tbody>
@@ -37,8 +36,6 @@ else
 }
 
 <a href="/Rezervasyon/Ekle" class="btn-ekle">Yeni Rezervasyon Ekle</a>
-
-
 
 <style>
     body {
@@ -61,20 +58,20 @@ else
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-        .rezervasyon-table th, .rezervasyon-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
+    .rezervasyon-table th, .rezervasyon-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
 
-        .rezervasyon-table th {
-            background-color: #4CAF50;
-            color: white;
-        }
+    .rezervasyon-table th {
+        background-color: #4CAF50;
+        color: white;
+    }
 
-        .rezervasyon-table tr:hover {
-            background-color: #f1f1f1;
-        }
+    .rezervasyon-table tr:hover {
+        background-color: #f1f1f1;
+    }
 
     .btn-ekle {
         display: inline-block;
@@ -88,7 +85,7 @@ else
         transition: background-color 0.3s;
     }
 
-        .btn-ekle:hover {
-            background-color: #45a049;
-        }
+    .btn-ekle:hover {
+        background-color: #45a049;
+    }
 </style>

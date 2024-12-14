@@ -1,49 +1,43 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication7.Models;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using WebApplication7.Data;
 
 namespace WebApplication7.Controllers
 {
     public class KullaniciController : Controller
     {
-        private readonly KullaniciDbContext _context;
+        private readonly MyCustomDbContext _context;
 
-        public KullaniciController(KullaniciDbContext context)
+        public KullaniciController(MyCustomDbContext context)
         {
-            _context = context;
+            _context = context; // DbContext burada doğru şekilde kullanılıyor
         }
 
+        // Kullanıcı Paneli
         public IActionResult UserPanel()
         {
             return View();
         }
 
+        // Kullanıcı Girişi
         [HttpPost]
-        public IActionResult KullaniciGiris(string action, string Mail, string Sifre)
+        public IActionResult KullaniciGiris(string Mail, string Sifre)
         {
-            if (action == "Giris")
+            if (string.IsNullOrEmpty(Mail) || string.IsNullOrEmpty(Sifre))
             {
-                if (string.IsNullOrEmpty(Mail) || string.IsNullOrEmpty(Sifre))
-                {
-                    ViewBag.ErrorMessage = "Lütfen tüm alanları doldurun.";
-                    return View("UserPanel");
-                }
-
-                // Kullanıcıyı veritabanında kontrol et
-                var kullanici = _context.Kullanicilar.FirstOrDefault(k => k.Mail == Mail && k.Sifre == Sifre);
-                if (kullanici != null)
-                {
-                    return RedirectToAction("Index", "Home");
-                }
-
-                ViewBag.ErrorMessage = "Hatalı e-posta veya şifre.";
+                ViewBag.ErrorMessage = "Lütfen tüm alanları doldurun.";
                 return View("UserPanel");
             }
-            else if (action == "Kayit")
+
+            // Kullanıcıyı veritabanında kontrol et
+            var kullanici = _context.Kullanicilar.FirstOrDefault(k => k.Mail == Mail && k.Sifre == Sifre);
+            if (kullanici != null)
             {
-                return RedirectToAction("KayitOl");
+                return RedirectToAction("Index", "Home");
             }
 
+            ViewBag.ErrorMessage = "Hatalı e-posta veya şifre.";
             return View("UserPanel");
         }
 

@@ -9,7 +9,12 @@ namespace WebApplication7.Models
         public string Soyad { get; set; }
         public DateTime Tarih { get; set; }
         public string Telefon { get; set; }
-        public int PersonelId { get; set; } // Personel'i belirlemek için
-        public Personel Personel { get; set; } // Personel nesnesi
+
+        // PersonelId, personelin kimliğini belirtir
+        public int PersonelId { get; set; } // Foreign key
+
+        // Personel nesnesi, referans olarak eklenir
+        public Personel Personel { get; set; } // Navigation property
     }
+
 }

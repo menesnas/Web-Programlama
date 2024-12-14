@@ -16,7 +16,6 @@ namespace WebApplication7.Models
         public string CalistigiSaat { get; set; }
 
         [Required]
-        public string GunlukKazandirdigiPara { get; set; }
-
+        public int GunlukKazandirdigiPara { get; set; }
     }
 }

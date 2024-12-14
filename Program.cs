@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using WebApplication7.Data;
+using WebApplication7.Models;
 
 
 namespace WebApplication7
@@ -12,15 +14,10 @@ namespace WebApplication7
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            // Personel DbContext ekle
-            builder.Services.AddDbContext<PersonelDbContext>(options =>
-                  options.UseSqlServer(builder.Configuration.GetConnectionString("PersonelConnection")));
+            builder.Services.AddDbContext<MyCustomDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MyCustomConnection")));
 
-            builder.Services.AddDbContext<KullaniciDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("KullaniciConnection")));
 
-            builder.Services.AddDbContext<RezervasyonDbContext>(options =>
-                  options.UseSqlServer(builder.Configuration.GetConnectionString("RezervasyonConnection")));
 
 
             var app = builder.Build();
@@ -42,6 +39,10 @@ namespace WebApplication7
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Login}/{action=Index}/{id?}");
+
+
+
+            
 
             app.Run();
         }
