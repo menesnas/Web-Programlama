@@ -37,16 +37,34 @@
 
     <div>
         <label for="PersonelId">Personel</label>
-        <select id="PersonelId" name="Rezervasyon.PersonelId" required>
+        <select id="PersonelId" name="SecilenPersonelId" required>
             <option value="">Lütfen bir personel seçin</option>
-            @foreach (var personeller in Model.Personeller)
+            @foreach (var personel in Model.Personeller)
             {
-                <option value="@personeller.Id" 
-                        (personeller.Id = Model.Rezervasyon.PersonelId )>
-                    @personeller.Ad @personeller.Soyad
-                </option>
+                if (personel.Id == Model.SecilenPersonelId)
+                {
+                    <option value="@personel.Id" selected>
+                        @personel.Ad @personel.Soyad
+                    </option>
+                }
+                else
+                {
+                    <option value="@personel.Id">
+                        @personel.Ad @personel.Soyad
+                    </option>
+                }
             }
         </select>
+
+
+
+
+
+
+
+
+
+
     </div>
 
     <button type="submit">Rezervasyon Ekle</button>

@@ -39,47 +39,52 @@ namespace WebApplication7.Controllers
 
         // Yeni rezervasyon ekleme işlemi (POST)
         [HttpPost]
-        [HttpPost]
         public IActionResult Ekle(RezervasyonViewModel viewModel)
         {
-            // Personel seçildiğinden emin ol
+            // Personel seçimi kontrolü
             if (viewModel.SecilenPersonelId == 0)
             {
-                ModelState.AddModelError("SecilenPersonelId", "Lütfen personel seçin.");
+                ModelState.AddModelError("SecilenPersonelId", "Lütfen bir personel seçin.");
             }
 
-            // Model geçerliyse veritabanına kaydedelim
+            // Model doğrulama
             if (ModelState.IsValid)
             {
                 try
                 {
+                    // Rezervasyon nesnesini oluşturuyoruz
                     var rezervasyon = new Rezervasyon
                     {
                         Ad = viewModel.Rezervasyon.Ad,
                         Soyad = viewModel.Rezervasyon.Soyad,
                         Tarih = viewModel.Rezervasyon.Tarih,
+                        Telefon = viewModel.Rezervasyon.Telefon,
+                        // Seçilen personeli alıyoruz
                         Personel = _context.Personeller
-                            .FirstOrDefault(p => p.Id == viewModel.SecilenPersonelId) // Seçilen personeli alıyoruz
+                            .FirstOrDefault(p => p.Id == viewModel.SecilenPersonelId)
                     };
 
-                    // Veritabanına ekle
+                    // Veritabanına ekliyoruz
                     _context.Rezervasyonlar.Add(rezervasyon);
                     _context.SaveChanges();
 
-                    // Başarıyla kaydedildiyse Index sayfasına yönlendir
+                    // Başarıyla kaydedildiyse Index sayfasına yönlendiriyoruz
                     return RedirectToAction("Index");
                 }
                 catch (Exception ex)
                 {
-                    // Hata oluşursa hata mesajını göster
-                    ModelState.AddModelError("", "Bir hata oluştu: " + ex.Message);
+                    // Hata oluşursa hata mesajını ekliyoruz
+                    ModelState.AddModelError("", $"Bir hata oluştu: {ex.Message}");
                 }
             }
 
-            // Eğer model geçerli değilse personel listesini yeniden yükleyip formu tekrar göster
+            // Eğer model geçerli değilse, Personeller listesini yeniden yükleyip formu tekrar gösteriyoruz
             viewModel.Personeller = _context.Personeller.ToList();
             return View(viewModel);
         }
+
+
+
 
     }
 }

@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 using WebApplication7.Models; // Personel modelini kullanmak için
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using WebApplication7.Data;
+using System.Linq;
 
 namespace WebApplication7.Controllers
 {
@@ -22,11 +23,16 @@ namespace WebApplication7.Controllers
             var personeller = _context.Personeller.ToList(); // Veritabanındaki tüm personelleri al
             return View(personeller); // Personel listesini view'a gönder
         }
-
-        // Yeni personel ekleme formunu gösterme
         public IActionResult Create()
         {
-            return View(); // Create.cshtml sayfasını döner
+            var userRole = HttpContext.Session.GetString("UserRole");
+            if (string.IsNullOrEmpty(userRole) || userRole != "Admin")
+            {
+                TempData["ErrorMessage"] = "Bu sayfaya erişim yetkiniz yok.";
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View();
         }
 
         // Yeni personel ekleme işlemi

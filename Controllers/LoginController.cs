@@ -12,12 +12,14 @@ namespace WebApplication7.Controllers
         [HttpPost]
         public IActionResult AdminLogin()
         {
+            HttpContext.Session.SetString("UserRole", "Admin"); // Admin rolünü session'a ekle
             return RedirectToAction("AdminPanel", "Admin");
         }
 
         [HttpPost]
         public IActionResult UserLogin()
         {
+            HttpContext.Session.SetString("UserRole", "User"); // Kullanıcı rolünü session'a ekle
             return RedirectToAction("UserPanel", "Kullanici");
         }
     }

@@ -1,7 +1,10 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using WebApplication7.Data;
-using WebApplication7.Models;
-
 
 namespace WebApplication7
 {
@@ -11,18 +14,23 @@ namespace WebApplication7
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<MyCustomDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MyCustomConnection")));
-
-
+                options.UseSqlServer(builder.Configuration.GetConnectionString("MyCustomConnection")));
+            // Session Servisini Ekleyin
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Session süresi 30 dakika
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
 
 
             var app = builder.Build();
+            app.UseSession();
+            app.UseRouting();
 
-            // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -32,17 +40,18 @@ namespace WebApplication7
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Login}/{action=Index}/{id?}");
 
 
+            app.UseAuthorization(); // Yetkilendirme middleware'ý
 
-            
+
+            // Giriþ kontrolü yap
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Login}/{action=Index}/{id?}");
+            });
 
             app.Run();
         }

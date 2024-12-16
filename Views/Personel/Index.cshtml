@@ -1,8 +1,21 @@
 ﻿@model IEnumerable<WebApplication7.Models.Personel>
 
 @{
+
     ViewData["Title"] = "Personel Listesi";
 }
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+@if (Context.Session.GetString("UserRole") != "Admin")
+{
+    <p class="alert alert-danger">Bu sayfaya erişim yetkiniz yok.</p>
+    return; // Sayfanın geri kalanını göstermemek için.
+}
+
 
 <h1>Personel Listesi</h1>
 

@@ -1,14 +1,66 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\WebApplication7\\",
+  "WorkspaceRootPath": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\90531\\onedrive - ogr.sakarya.edu.tr\\masa\u00FCst\u00FC\\webapplication7\\views\\rezervasyon\\ekle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:views\\rezervasyon\\ekle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\views\\personel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:views\\personel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\90531\\onedrive - ogr.sakarya.edu.tr\\masa\u00FCst\u00FC\\webapplication7\\controllers\\rezervasyoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\controllers\\personelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:controllers\\personelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\controllers\\kullanicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:controllers\\kullanicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\controllers\\rezervasyoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:controllers\\rezervasyoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\views\\kullanici\\userpanel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:views\\kullanici\\userpanel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\menes\\onedrive\\masa\u00FCst\u00FC\\webapplication7 (5)\\webapplication7\\views\\kullanici\\kayitol.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:views\\kullanici\\kayitol.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +70,197 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Ekle.cshtml",
-              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\WebApplication7\\Views\\Rezervasyon\\Ekle.cshtml",
-              "RelativeDocumentMoniker": "Views\\Rezervasyon\\Ekle.cshtml",
-              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\WebApplication7\\Views\\Rezervasyon\\Ekle.cshtml",
-              "RelativeToolTip": "Views\\Rezervasyon\\Ekle.cshtml",
-              "ViewState": "AgIAACIAAAAAAAAAAAAswCkAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T13:00:16.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "Models\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T12:59:25.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "KullaniciController.cs",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\KullaniciController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KullaniciController.cs",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\KullaniciController.cs",
+              "RelativeToolTip": "Controllers\\KullaniciController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA1wDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T12:31:49.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T12:59:05.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PersonelController.cs",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\PersonelController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PersonelController.cs",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\PersonelController.cs",
+              "RelativeToolTip": "Controllers\\PersonelController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T13:12:22.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-14T20:25:07.093Z",
+              "WhenOpened": "2024-12-16T12:59:33.423Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RezervasyonController.cs",
-              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\WebApplication7\\Controllers\\RezervasyonController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RezervasyonController.cs",
-              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\WebApplication7\\Controllers\\RezervasyonController.cs",
-              "RelativeToolTip": "Controllers\\RezervasyonController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAmwFIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T19:33:01.141Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T18:47:36.673Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Personel\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Personel\\Index.cshtml",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Personel\\Index.cshtml",
+              "RelativeToolTip": "Views\\Personel\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T18:39:41.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T19:03:14.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T13:09:18.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-16T18:38:36.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T13:19:44.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RezervasyonController.cs",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\RezervasyonController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RezervasyonController.cs",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Controllers\\RezervasyonController.cs",
+              "RelativeToolTip": "Controllers\\RezervasyonController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T13:19:53.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserPanel.cshtml",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Kullanici\\UserPanel.cshtml",
+              "RelativeDocumentMoniker": "Views\\Kullanici\\UserPanel.cshtml",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Kullanici\\UserPanel.cshtml",
+              "RelativeToolTip": "Views\\Kullanici\\UserPanel.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T12:32:17.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "KayitOl.cshtml",
+              "DocumentMoniker": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Kullanici\\KayitOl.cshtml",
+              "RelativeDocumentMoniker": "Views\\Kullanici\\KayitOl.cshtml",
+              "ToolTip": "C:\\Users\\menes\\OneDrive\\Masa\u00FCst\u00FC\\WebApplication7 (5)\\WebApplication7\\Views\\Kullanici\\KayitOl.cshtml",
+              "RelativeToolTip": "Views\\Kullanici\\KayitOl.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T12:32:02.199Z"
             }
           ]
         }

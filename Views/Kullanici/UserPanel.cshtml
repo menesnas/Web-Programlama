@@ -1,4 +1,5 @@
-﻿@{
+﻿@model WebApplication7.Models.Kullanici
+@{
     ViewData["Title"] = "Kullanıcı Paneli";
     Layout = null;
 }
@@ -10,8 +11,8 @@
     <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
 }
 
+<!-- Giriş Formu -->
 <form asp-action="KullaniciGiris" method="post">
-    <input type="hidden" name="action" value="Giris" />
     <div>
         <label for="Mail">Mail:</label>
         <input type="email" id="Mail" name="Mail" required />
@@ -23,7 +24,7 @@
     <button type="submit">Giriş Yap</button>
 </form>
 
-<form asp-action="KullaniciGiris" method="post">
-    <input type="hidden" name="action" value="Kayit" />
+<!-- Kayıt Formuna Yönlendirme -->
+<form asp-action="KayitOl" method="get">
     <button type="submit">Kayıt Ol</button>
 </form>
