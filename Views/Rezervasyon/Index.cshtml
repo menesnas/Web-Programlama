@@ -25,10 +25,10 @@ else
                 <tr>
                     <td>@rezervasyon.Ad</td>
                     <td>@rezervasyon.Soyad</td>
-                    <td>@rezervasyon.Tarih.ToString("dd/MM/yyyy HH:mm") ?? "Tarih Belirtilmemiş"</td>
+                    <td>@rezervasyon.Tarih.ToString("dd/MM/yyyy HH:mm") </td>
                     <td>@rezervasyon.Telefon</td>
-                    <td>@rezervasyon.Personel?.Ad ?? "Belirtilmemiş"</td>
-                    <td>@rezervasyon.Personel?.Soyad ?? "Belirtilmemiş"</td>
+                    <td>@rezervasyon.Personel?.Ad</td>
+                    <td>@rezervasyon.Personel?.Soyad</td>
                 </tr>
             }
         </tbody>

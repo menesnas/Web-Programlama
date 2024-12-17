@@ -3,17 +3,7 @@
 <h2>Yeni Rezervasyon Ekle</h2>
 
 <form asp-action="Ekle" asp-controller="Rezervasyon" method="post">
-    @if (!ViewData.ModelState.IsValid)
-    {
-        <div style="color: red;">
-            <ul>
-                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
-                {
-                    <li>@error.ErrorMessage</li>
-                }
-            </ul>
-        </div>
-    }
+
 
     <div>
         <label for="Ad">Ad</label>
@@ -37,11 +27,11 @@
 
     <div>
         <label for="PersonelId">Personel</label>
-        <select id="PersonelId" name="SecilenPersonelId" required>
+        <select id="PersonelId" name="Rezervasyon.PersonelId">
             <option value="">Lütfen bir personel seçin</option>
             @foreach (var personel in Model.Personeller)
             {
-                if (personel.Id == Model.SecilenPersonelId)
+                if (personel.Id == Model.Rezervasyon.PersonelId)
                 {
                     <option value="@personel.Id" selected>
                         @personel.Ad @personel.Soyad
@@ -55,15 +45,6 @@
                 }
             }
         </select>
-
-
-
-
-
-
-
-
-
 
     </div>
 
@@ -94,21 +75,21 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
-    form div {
-        margin-bottom: 15px;
-    }
+        form div {
+            margin-bottom: 15px;
+        }
 
-    form label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
 
-    form input, form select, form button {
-        width: 100%;
-        padding: 8px;
-        font-size: 16px;
-    }
+        form input, form select, form button {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+        }
 
     .btn-back {
         display: block;
@@ -121,7 +102,7 @@
         border-radius: 5px;
     }
 
-    .btn-back:hover {
-        background-color: #45a049;
-    }
+        .btn-back:hover {
+            background-color: #45a049;
+        }
 </style>

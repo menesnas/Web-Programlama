@@ -4,8 +4,7 @@ namespace WebApplication7.Models
 {
     public class Personel
     {
-        public int Id { get; set; } // Otomatik artan birincil anahtar
-
+        public int Id { get; set; }
         [Required]
         public string Ad { get; set; }
 

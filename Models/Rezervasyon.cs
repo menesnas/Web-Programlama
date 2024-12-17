@@ -1,4 +1,5 @@
-﻿using WebApplication7.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using WebApplication7.Models;
 
 namespace WebApplication7.Models
 {
@@ -10,11 +11,11 @@ namespace WebApplication7.Models
         public DateTime Tarih { get; set; }
         public string Telefon { get; set; }
 
+        [ForeignKey("PersonelId")]
+        public Personel Personel { get; set; } // Bağlantılı Personel nesnesi
+        
         // PersonelId, personelin kimliğini belirtir
         public int PersonelId { get; set; } // Foreign key
-
-        // Personel nesnesi, referans olarak eklenir
-        public Personel Personel { get; set; } // Navigation property
     }
 
 }

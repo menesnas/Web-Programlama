@@ -18,6 +18,7 @@ namespace WebApplication7
 
             builder.Services.AddDbContext<MyCustomDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("MyCustomConnection")));
+
             // Session Servisini Ekleyin
             builder.Services.AddSession(options =>
             {
@@ -26,9 +27,9 @@ namespace WebApplication7
                 options.Cookie.IsEssential = true;
             });
 
-
             var app = builder.Build();
-            app.UseSession();
+
+            app.UseSession(); // Session middleware'ý eklenmiþ
             app.UseRouting();
 
             if (!app.Environment.IsDevelopment())
@@ -40,18 +41,12 @@ namespace WebApplication7
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-
-
-            app.UseAuthorization(); // Yetkilendirme middleware'ý
-
+            app.UseAuthorization(); // Yetkilendirme middleware'ý doðru sýrada eklenmiþ
 
             // Giriþ kontrolü yap
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Login}/{action=Index}/{id?}");
-            });
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Login}/{action=Index}/{id?}");
 
             app.Run();
         }
