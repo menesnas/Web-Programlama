@@ -1,5 +1,6 @@
 ﻿@model WebApplication7.Models.RezervasyonViewModel
 
+
 <h2>Yeni Rezervasyon Ekle</h2>
 
 <form asp-action="Ekle" asp-controller="Rezervasyon" method="post">
@@ -23,6 +24,28 @@
     <div>
         <label for="Telefon">Telefon</label>
         <input type="tel" id="Telefon" name="Rezervasyon.Telefon" value="@Model.Rezervasyon.Telefon" required />
+    </div>
+    <div>
+        <label for="SacModeliId">SacModeli</label>
+        <select id="SacModeliId" name="Rezervasyon.SacModeliId">
+            <option value="">Lütfen bir Saç Modeli seçin</option>
+            @foreach (var sacmodelleri in Model.SacModelleri)
+            {
+                if (sacmodelleri.Id == Model.Rezervasyon.SacModeliId)
+                {
+                    <option value="@sacmodelleri.Id" selected>
+                        @sacmodelleri.İsim @sacmodelleri.Ucret
+                    </option>
+                }
+                else
+                {
+                    <option value="@sacmodelleri.Id">
+                        @sacmodelleri.İsim @sacmodelleri.Ucret
+                    </option>
+                }
+            }
+        </select>
+
     </div>
 
     <div>

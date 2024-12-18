@@ -95,6 +95,9 @@ namespace WebApplication7.Migrations
                     b.Property<int>("PersonelId")
                         .HasColumnType("int");
 
+                    b.Property<int>("SacModeliId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Soyad")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -110,7 +113,29 @@ namespace WebApplication7.Migrations
 
                     b.HasIndex("PersonelId");
 
+                    b.HasIndex("SacModeliId");
+
                     b.ToTable("Rezervasyonlar");
+                });
+
+            modelBuilder.Entity("WebApplication7.Models.SacModeli", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Ucret")
+                        .HasColumnType("int");
+
+                    b.Property<string>("İsim")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SacModelleri");
                 });
 
             modelBuilder.Entity("WebApplication7.Models.Rezervasyon", b =>
@@ -121,7 +146,15 @@ namespace WebApplication7.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("WebApplication7.Models.SacModeli", "Sacmodel")
+                        .WithMany()
+                        .HasForeignKey("SacModeliId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Personel");
+
+                    b.Navigation("Sacmodel");
                 });
 #pragma warning restore 612, 618
         }

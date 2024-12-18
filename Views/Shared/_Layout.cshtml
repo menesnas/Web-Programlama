@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebApplication7.styles.css" asp-append-version="true" />
     <style>
+        html, body {
+            height: 100%; /* Sayfa yüksekliği için */
+            margin: 0;
+        }
+
         body {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Sayfanın en az 100vh yüksekliğinde olmasını sağlar */
-            overflow-x: hidden; /* Yatay kaydırmayı gizler */
         }
 
-        /* Sayfa içeriği */
         .content {
-            flex: 1; /* Sayfa içeriğinin esneklik kazanmasını sağlar */
-            overflow-y: auto; /* Dikey kaydırma ekler */
+            flex: 1; /* İçeriği büyüt ve arada kalan boşluğu doldur */
+            overflow-y: auto;
+        }
+
+        footer {
+            margin-top: auto; /* Footer'ı sayfanın en altına sabitle */
         }
     </style>
 </head>
@@ -45,23 +51,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Personel" asp-action="Index">Personel Ekle</a>
                         </li>
-                        
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Sayfa İçeriği için boş alan -->
+    <!-- Sayfa İçeriği -->
     <div class="content">
         @RenderBody()
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container" style="background-color: white; padding: 15px;">
-            &copy; 2024 - Reşat ve Menes - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

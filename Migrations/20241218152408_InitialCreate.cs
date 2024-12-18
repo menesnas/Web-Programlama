@@ -44,6 +44,20 @@ namespace WebApplication7.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "SacModelleri",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    İsim = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Ucret = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SacModelleri", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Rezervasyonlar",
                 columns: table => new
                 {
@@ -53,6 +67,7 @@ namespace WebApplication7.Migrations
                     Soyad = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Tarih = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Telefon = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SacModeliId = table.Column<int>(type: "int", nullable: false),
                     PersonelId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -64,12 +79,23 @@ namespace WebApplication7.Migrations
                         principalTable: "Personeller",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Rezervasyonlar_SacModelleri_SacModeliId",
+                        column: x => x.SacModeliId,
+                        principalTable: "SacModelleri",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Rezervasyonlar_PersonelId",
                 table: "Rezervasyonlar",
                 column: "PersonelId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Rezervasyonlar_SacModeliId",
+                table: "Rezervasyonlar",
+                column: "SacModeliId");
         }
 
         /// <inheritdoc />
@@ -83,6 +109,9 @@ namespace WebApplication7.Migrations
 
             migrationBuilder.DropTable(
                 name: "Personeller");
+
+            migrationBuilder.DropTable(
+                name: "SacModelleri");
         }
     }
 }
