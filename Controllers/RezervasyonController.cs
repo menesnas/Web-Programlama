@@ -72,7 +72,7 @@ namespace WebApplication7.Controllers
                 // Fotoğrafı analiz et butonuna basıldı.
                 // images/edits endpoint'ini kullanacağız.
 
-                var apiKey = "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"; // Kendi API anahtarınızı girin.
+                var apiKey = ""; // Kendi API anahtarınızı girin.
 
                 if (ResimDosyasi != null && ResimDosyasi.Length > 0)
                 {
