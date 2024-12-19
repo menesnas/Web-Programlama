@@ -269,6 +269,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\enes\\WebApplication7\\WebApplication7\\wwwroot\\mask.png",
+      "PackagePath": "staticwebassets\\mask.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebApplication7.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

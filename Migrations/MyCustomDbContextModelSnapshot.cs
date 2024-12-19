@@ -64,9 +64,8 @@ namespace WebApplication7.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CalistigiSaat")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("CalistigiSaat")
+                        .HasColumnType("int");
 
                     b.Property<int>("GunlukKazandirdigiPara")
                         .HasColumnType("int");
@@ -89,6 +88,10 @@ namespace WebApplication7.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Ad")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

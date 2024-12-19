@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i5eehsftsQz+u9zpaFMGwlAthl9xK9wV/s0q3wAzPxE=",
+  "Hash": "MUZ5BaMbKZgahsu1odtPfP+wqkvi4h1B5pVMP5DsvFM=",
   "Source": "WebApplication7",
   "BasePath": "_content/WebApplication7",
   "Mode": "Default",
@@ -1443,6 +1443,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\enes\\WebApplication7\\WebApplication7\\wwwroot\\mask.png",
+      "SourceId": "WebApplication7",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\enes\\WebApplication7\\WebApplication7\\wwwroot\\",
+      "BasePath": "_content/WebApplication7",
+      "RelativePath": "mask#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rm8s7k88xv",
+      "Integrity": "TS5MS3xD5UGLMe/+mj1rupxqfBafaaiJm64uqKkDW+E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\mask.png"
     }
   ],
   "Endpoints": [
@@ -6855,6 +6876,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s="
+        }
+      ]
+    },
+    {
+      "Route": "mask.png",
+      "AssetFile": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\enes\\WebApplication7\\WebApplication7\\wwwroot\\mask.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "91317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TS5MS3xD5UGLMe/+mj1rupxqfBafaaiJm64uqKkDW+E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Dec 2024 14:33:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TS5MS3xD5UGLMe/+mj1rupxqfBafaaiJm64uqKkDW+E="
+        }
+      ]
+    },
+    {
+      "Route": "mask.rm8s7k88xv.png",
+      "AssetFile": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\enes\\WebApplication7\\WebApplication7\\wwwroot\\mask.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "91317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TS5MS3xD5UGLMe/+mj1rupxqfBafaaiJm64uqKkDW+E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Dec 2024 14:33:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rm8s7k88xv"
+        },
+        {
+          "Name": "label",
+          "Value": "mask.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TS5MS3xD5UGLMe/+mj1rupxqfBafaaiJm64uqKkDW+E="
         }
       ]
     },

@@ -3,9 +3,7 @@
 
 <h2>Yeni Rezervasyon Ekle</h2>
 
-<form asp-action="Ekle" asp-controller="Rezervasyon" method="post">
-
-
+<form asp-action="Ekle" asp-controller="Rezervasyon" method="post" enctype="multipart/form-data">
     <div>
         <label for="Ad">Ad</label>
         <input type="text" id="Ad" name="Rezervasyon.Ad" value="@Model.Rezervasyon.Ad" required />
@@ -25,8 +23,9 @@
         <label for="Telefon">Telefon</label>
         <input type="tel" id="Telefon" name="Rezervasyon.Telefon" value="@Model.Rezervasyon.Telefon" required />
     </div>
+
     <div>
-        <label for="SacModeliId">SacModeli</label>
+        <label for="SacModeliId">Saç Modeli</label>
         <select id="SacModeliId" name="Rezervasyon.SacModeliId">
             <option value="">Lütfen bir Saç Modeli seçin</option>
             @foreach (var sacmodelleri in Model.SacModelleri)
@@ -45,7 +44,6 @@
                 }
             }
         </select>
-
     </div>
 
     <div>
@@ -68,10 +66,24 @@
                 }
             }
         </select>
-
     </div>
 
-    <button type="submit">Rezervasyon Ekle</button>
+    <div>
+        <label for="ResimDosyasi">Fotoğraf Yükle (isteğe bağlı)</label>
+        <input type="file" id="ResimDosyasi" name="ResimDosyasi" accept="image/*" />
+    </div>
+
+    <button type="submit" name="action" value="analyze">Fotoğrafı Analiz Et</button>
+    @if (!string.IsNullOrEmpty(Model?.Rezervasyon?.ImageUrl))
+    {
+        <img src="@Model.Rezervasyon.ImageUrl" alt="Üretilen Saç Modeli" style="max-width:200px;" />
+    }
+    else
+    {
+        <p>Henüz bir görsel üretilmedi veya analiz başarısız oldu.</p>
+    }
+
+    <button type="submit" name="action" value="add">Rezervasyon Ekle</button>
 </form>
 
 <a href="/Rezervasyon/Index" class="btn-back">Rezervasyon Listesine Dön</a>

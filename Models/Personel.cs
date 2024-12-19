@@ -12,7 +12,7 @@ namespace WebApplication7.Models
         public string Soyad { get; set; }
 
         [Required]
-        public string CalistigiSaat { get; set; }
+        public int CalistigiSaat { get; set; }
 
         [Required]
         public int GunlukKazandirdigiPara { get; set; }

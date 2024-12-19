@@ -2081,3 +2081,4 @@ C:\Users\90531\OneDrive - ogr.sakarya.edu.tr\Masaüstü\enes\WebApplication7\Web
 C:\Users\90531\OneDrive - ogr.sakarya.edu.tr\Masaüstü\enes\WebApplication7\WebApplication7\obj\Debug\net8.0\WebApplication7.pdb
 C:\Users\90531\OneDrive - ogr.sakarya.edu.tr\Masaüstü\enes\WebApplication7\WebApplication7\obj\Debug\net8.0\WebApplication7.genruntimeconfig.cache
 C:\Users\90531\OneDrive - ogr.sakarya.edu.tr\Masaüstü\enes\WebApplication7\WebApplication7\obj\Debug\net8.0\ref\WebApplication7.dll
+C:\Users\90531\OneDrive - ogr.sakarya.edu.tr\Masaüstü\enes\WebApplication7\WebApplication7\bin\Debug\net8.0\SixLabors.ImageSharp.dll

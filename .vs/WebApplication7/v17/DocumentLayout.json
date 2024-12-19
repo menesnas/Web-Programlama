@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:controllers\\rezervasyoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\90531\\onedrive - ogr.sakarya.edu.tr\\masa\u00FCst\u00FC\\enes\\webapplication7\\webapplication7\\views\\rezervasyon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:views\\rezervasyon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\90531\\onedrive - ogr.sakarya.edu.tr\\masa\u00FCst\u00FC\\enes\\webapplication7\\webapplication7\\views\\rezervasyon\\ekle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:views\\rezervasyon\\ekle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\90531\\onedrive - ogr.sakarya.edu.tr\\masa\u00FCst\u00FC\\enes\\webapplication7\\webapplication7\\models\\rezervasyon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:models\\rezervasyon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\90531\\onedrive - ogr.sakarya.edu.tr\\masa\u00FCst\u00FC\\enes\\webapplication7\\webapplication7\\models\\personel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:models\\personel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\90531\\onedrive - ogr.sakarya.edu.tr\\masa\u00FCst\u00FC\\enes\\webapplication7\\webapplication7\\views\\rezervasyon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|solutionrelative:views\\rezervasyon\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF0D870B-7D81-411C-B780-30DBF199E133}|WebApplication7.csproj|c:\\users\\90531\\onedrive - ogr.sakarya.edu.tr\\masa\u00FCst\u00FC\\enes\\webapplication7\\webapplication7\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,20 +42,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Views\\Rezervasyon\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Rezervasyon\\Index.cshtml",
-              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Views\\Rezervasyon\\Index.cshtml",
-              "RelativeToolTip": "Views\\Rezervasyon\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvzMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:21:21.719Z",
+              "DocumentIndex": 3,
+              "Title": "Personel.cs",
+              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Models\\Personel.cs",
+              "RelativeDocumentMoniker": "Models\\Personel.cs",
+              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Models\\Personel.cs",
+              "RelativeToolTip": "Models\\Personel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T16:50:02.534Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "Rezervasyon.cs",
+              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Models\\Rezervasyon.cs",
+              "RelativeDocumentMoniker": "Models\\Rezervasyon.cs",
+              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Models\\Rezervasyon.cs",
+              "RelativeToolTip": "Models\\Rezervasyon.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T14:21:30.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RezervasyonController.cs",
+              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Controllers\\RezervasyonController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RezervasyonController.cs",
+              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Controllers\\RezervasyonController.cs",
+              "RelativeToolTip": "Controllers\\RezervasyonController.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAkwGQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T15:28:06.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ekle.cshtml",
+              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Views\\Rezervasyon\\Ekle.cshtml",
+              "RelativeDocumentMoniker": "Views\\Rezervasyon\\Ekle.cshtml",
+              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Views\\Rezervasyon\\Ekle.cshtml",
+              "RelativeToolTip": "Views\\Rezervasyon\\Ekle.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-17T19:51:11.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -64,41 +107,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Personel.cs",
-              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Models\\Personel.cs",
-              "RelativeDocumentMoniker": "Models\\Personel.cs",
-              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Models\\Personel.cs",
-              "RelativeToolTip": "Models\\Personel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T16:50:02.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RezervasyonController.cs",
-              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Controllers\\RezervasyonController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RezervasyonController.cs",
-              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Controllers\\RezervasyonController.cs",
-              "RelativeToolTip": "Controllers\\RezervasyonController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T15:28:06.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ekle.cshtml",
-              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Views\\Rezervasyon\\Ekle.cshtml",
-              "RelativeDocumentMoniker": "Views\\Rezervasyon\\Ekle.cshtml",
-              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Views\\Rezervasyon\\Ekle.cshtml",
-              "RelativeToolTip": "Views\\Rezervasyon\\Ekle.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Views\\Rezervasyon\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Rezervasyon\\Index.cshtml",
+              "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Views\\Rezervasyon\\Index.cshtml",
+              "RelativeToolTip": "Views\\Rezervasyon\\Index.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAADwvzQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-17T19:51:11.094Z",
+              "WhenOpened": "2024-12-18T17:21:21.719Z",
               "EditorCaption": ""
             }
           ]

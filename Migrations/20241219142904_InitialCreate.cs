@@ -35,7 +35,7 @@ namespace WebApplication7.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Ad = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Soyad = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CalistigiSaat = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CalistigiSaat = table.Column<int>(type: "int", nullable: false),
                     GunlukKazandirdigiPara = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -67,6 +67,7 @@ namespace WebApplication7.Migrations
                     Soyad = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Tarih = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Telefon = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SacModeliId = table.Column<int>(type: "int", nullable: false),
                     PersonelId = table.Column<int>(type: "int", nullable: false)
                 },
