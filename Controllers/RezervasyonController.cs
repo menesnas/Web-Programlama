@@ -120,7 +120,6 @@ namespace WebApplication7.Controllers
                         form.Add(new StringContent("1"), "n");
                         form.Add(new StringContent("1024x1024"), "size");
 
-                        var response = await client.PostAsync("https://api.openai.com/v1/images/edits", form);
 
                         if (response.IsSuccessStatusCode)
                         {
