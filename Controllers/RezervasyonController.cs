@@ -72,7 +72,7 @@ namespace WebApplication7.Controllers
                 // Fotoğrafı analiz et butonuna basıldı.
                 // images/edits endpoint'ini kullanacağız.
 
-                var apiKey = ""; // Kendi API anahtarınızı girin.
+                // var apiKey = ""; // Kendi API anahtarınızı girin.
 
                 if (ResimDosyasi != null && ResimDosyasi.Length > 0)
                 {

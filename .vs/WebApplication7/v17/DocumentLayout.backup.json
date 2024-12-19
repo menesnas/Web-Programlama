@@ -50,8 +50,7 @@
               "RelativeToolTip": "Models\\Personel.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwA4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T16:50:02.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T16:50:02.534Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "Models\\Rezervasyon.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T14:21:30.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-19T14:21:30.023Z"
             },
             {
               "$type": "Document",
@@ -74,7 +72,7 @@
               "RelativeDocumentMoniker": "Controllers\\RezervasyonController.cs",
               "ToolTip": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masa\u00FCst\u00FC\\enes\\WebApplication7\\WebApplication7\\Controllers\\RezervasyonController.cs",
               "RelativeToolTip": "Controllers\\RezervasyonController.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAkwGQAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwEoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T15:28:06.496Z",
               "EditorCaption": ""
@@ -89,8 +87,7 @@
               "RelativeToolTip": "Views\\Rezervasyon\\Ekle.cshtml",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAAEwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-17T19:51:11.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-17T19:51:11.094Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAADUAAAAAAAAAAADwv0AAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:09:32.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T17:09:32.192Z"
             },
             {
               "$type": "Document",
@@ -115,8 +111,7 @@
               "RelativeToolTip": "Views\\Rezervasyon\\Index.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAADwvzQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-18T17:21:21.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T17:21:21.719Z"
             }
           ]
         }
