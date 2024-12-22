@@ -1,6 +1,5 @@
 ﻿@model WebApplication7.Models.RezervasyonViewModel
 
-
 <h2>Yeni Rezervasyon Ekle</h2>
 
 <form asp-action="Ekle" asp-controller="Rezervasyon" method="post" enctype="multipart/form-data">
@@ -28,20 +27,27 @@
         <label for="SacModeliId">Saç Modeli</label>
         <select id="SacModeliId" name="Rezervasyon.SacModeliId">
             <option value="">Lütfen bir Saç Modeli seçin</option>
-            @foreach (var sacmodelleri in Model.SacModelleri)
+            @if (Model?.SacModelleri != null)
             {
-                if (sacmodelleri.Id == Model.Rezervasyon.SacModeliId)
+                @foreach (var sacmodelleri in Model.SacModelleri)
                 {
-                    <option value="@sacmodelleri.Id" selected>
-                        @sacmodelleri.İsim @sacmodelleri.Ucret
-                    </option>
+                    if (sacmodelleri.Id == Model.Rezervasyon?.SacModeliId)
+                    {
+                        <option value="@sacmodelleri.Id" selected>
+                            @sacmodelleri.İsim @sacmodelleri.Ucret
+                        </option>
+                    }
+                    else
+                    {
+                        <option value="@sacmodelleri.Id">
+                            @sacmodelleri.İsim @sacmodelleri.Ucret
+                        </option>
+                    }
                 }
-                else
-                {
-                    <option value="@sacmodelleri.Id">
-                        @sacmodelleri.İsim @sacmodelleri.Ucret
-                    </option>
-                }
+            }
+            else
+            {
+                <option disabled>Saç modeli bilgisi bulunamadı</option>
             }
         </select>
     </div>
@@ -69,24 +75,44 @@
     </div>
 
     <div>
-        <label for="ResimDosyasi">Fotoğraf Yükle (isteğe bağlı)</label>
-        <input type="file" id="ResimDosyasi" name="ResimDosyasi" accept="image/*" />
+        <label for="ResimDosyasi">Fotoğraf Yükle</label>
+        <input type="file" id="ResimDosyasi" name="ResimDosyasi" accept="image/*" required />
     </div>
 
-    <button type="submit" name="action" value="analyze">Fotoğrafı Analiz Et</button>
-    @if (!string.IsNullOrEmpty(Model?.Rezervasyon?.ImageUrl))
-    {
-        <img src="@Model.Rezervasyon.ImageUrl" alt="Üretilen Saç Modeli" style="max-width:200px;" />
-    }
-    else
-    {
-        <p>Henüz bir görsel üretilmedi veya analiz başarısız oldu.</p>
-    }
+    <div>
+        <input type="hidden" name="action" value="generate" />
+        <button type="submit" name="action" value="generate">Fotoğraf Üret</button>
+        <button type="submit" name="action" value="add">Rezervasyon Ekle</button>
+    </div>
 
-    <button type="submit" name="action" value="add">Rezervasyon Ekle</button>
+    <div id="image-container" style="text-align:center; margin: 20px 0;">
+        @if (!string.IsNullOrEmpty(Model?.Rezervasyon?.ImageUrl))
+        {
+            <img id="generated-image" src="@Model.Rezervasyon.ImageUrl" alt="Üretilen Saç Modeli" style="max-width:400px; border-radius: 10px; border: 2px solid #4CAF50;" />
+        }
+        else
+        {
+            <p id="no-image-message" style="color: #888;">Henüz bir görsel üretilmedi veya analiz başarısız oldu.</p>
+        }
+    </div>
 </form>
 
 <a href="/Rezervasyon/Index" class="btn-back">Rezervasyon Listesine Dön</a>
+
+<script>
+    function updateImage(url) {
+        const img = document.getElementById('generated-image');
+        const message = document.getElementById('no-image-message');
+        if (url) {
+            img.src = url;
+            img.style.display = 'block';
+            message.style.display = 'none';
+        } else {
+            img.style.display = 'none';
+            message.style.display = 'block';
+        }
+    }
+</script>
 
 <style>
     body {

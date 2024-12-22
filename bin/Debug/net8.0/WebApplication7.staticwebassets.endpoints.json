@@ -249,6 +249,88 @@
       ]
     },
     {
+      "Route": "haarcascade_frontalface_default.xgtfkrmsl0.xml",
+      "AssetFile": "haarcascade_frontalface_default.xml",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "930127"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D31FJ4ROtRTUpJSOgi2pD7sWo0oLu7xq3GSYdHpar7A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Dec 2024 11:35:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xgtfkrmsl0"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D31FJ4ROtRTUpJSOgi2pD7sWo0oLu7xq3GSYdHpar7A="
+        },
+        {
+          "Name": "label",
+          "Value": "haarcascade_frontalface_default.xml"
+        }
+      ]
+    },
+    {
+      "Route": "haarcascade_frontalface_default.xml",
+      "AssetFile": "haarcascade_frontalface_default.xml",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "930127"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D31FJ4ROtRTUpJSOgi2pD7sWo0oLu7xq3GSYdHpar7A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Dec 2024 11:35:36 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D31FJ4ROtRTUpJSOgi2pD7sWo0oLu7xq3GSYdHpar7A="
+        }
+      ]
+    },
+    {
       "Route": "images/Bakımlısakal.36ye1ovqaz.jpeg",
       "AssetFile": "images/Bakımlısakal.jpeg",
       "Selectors": [],
@@ -5493,88 +5575,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I="
-        }
-      ]
-    },
-    {
-      "Route": "mask.png",
-      "AssetFile": "mask.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "91317"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"TS5MS3xD5UGLMe/+mj1rupxqfBafaaiJm64uqKkDW+E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 19 Dec 2024 14:33:15 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-TS5MS3xD5UGLMe/+mj1rupxqfBafaaiJm64uqKkDW+E="
-        }
-      ]
-    },
-    {
-      "Route": "mask.rm8s7k88xv.png",
-      "AssetFile": "mask.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "91317"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"TS5MS3xD5UGLMe/+mj1rupxqfBafaaiJm64uqKkDW+E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 19 Dec 2024 14:33:15 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "rm8s7k88xv"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-TS5MS3xD5UGLMe/+mj1rupxqfBafaaiJm64uqKkDW+E="
-        },
-        {
-          "Name": "label",
-          "Value": "mask.png"
         }
       ]
     }

@@ -17,77 +17,77 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApplication7
 build_property.RootNamespace = WebApplication7
-build_property.ProjectDir = C:\Users\90531\OneDrive - ogr.sakarya.edu.tr\Masaüstü\enes\WebApplication7\WebApplication7\
+build_property.ProjectDir = C:\Users\menes\OneDrive\Masaüstü\WebApplication7\WebApplication7\WebApplication7\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\90531\OneDrive - ogr.sakarya.edu.tr\Masaüstü\enes\WebApplication7\WebApplication7
+build_property.MSBuildProjectDirectory = C:\Users\menes\OneDrive\Masaüstü\WebApplication7\WebApplication7\WebApplication7
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Admin/AdminPanel.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Admin/AdminPanel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5QYW5lbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Home/Index.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Home/Privacy.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Kullanici/KayitOl.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Kullanici/KayitOl.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXEtheWl0T2wuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Kullanici/UserPanel.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Kullanici/UserPanel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpXFVzZXJQYW5lbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Login/Index.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Personel/Create.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Personel/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Personel/Edit.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Personel/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Personel/Index.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Personel/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Rezervasyon/Ekle.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Rezervasyon/Ekle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV6ZXJ2YXN5b25cRWtsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Rezervasyon/Index.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Rezervasyon/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV6ZXJ2YXN5b25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Shared/Error.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/_ViewImports.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/_ViewStart.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/90531/OneDrive - ogr.sakarya.edu.tr/Masaüstü/enes/WebApplication7/WebApplication7/Views/Shared/_Layout.cshtml]
+[C:/Users/menes/OneDrive/Masaüstü/WebApplication7/WebApplication7/WebApplication7/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-kcj6918upk
