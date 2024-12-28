@@ -1,0 +1,14 @@
+﻿@model WebApplication7.Models.Personel
+
+@{
+    ViewData["Title"] = "Personel Silme Onayı";
+}
+
+<h1>Personel Silme Onayı</h1>
+<p><b>@Model.Ad @Model.Soyad</b> adlı kaydı silmek istediğinize emin misiniz?</p>
+
+<form asp-action="DeleteConfirmed" asp-route-id="@Model.Id" method="post">
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">Vazgeç</a>
+</form>

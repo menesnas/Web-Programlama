@@ -14,7 +14,7 @@ namespace WebApplication7.Controllers
         {
             // Admin bilgilerini doğrulama işlemi
             // Örnek: Sadece sabit bir kullanıcı adı ve şifre kontrol ediliyor
-            if (Mail == "a@a.com" && Sifre == "1234")
+            if ((Mail == "b211210006@sakarya.edu.tr" && Sifre == "sau") || (Mail == "b221210570@sakarya.edu.tr" && Sifre == "sau"))
             {
                 // Başarılı giriş -> Ana sayfaya yönlendirme
                 return RedirectToAction("Index", "Home");

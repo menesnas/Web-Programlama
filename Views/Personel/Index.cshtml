@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<WebApplication7.Models.Personel>
 
 @{
-
     ViewData["Title"] = "Personel Listesi";
 }
+
 @if (TempData["ErrorMessage"] != null)
 {
     <div class="alert alert-danger">
@@ -16,16 +16,15 @@
     return; // Sayfanın geri kalanını göstermemek için.
 }
 
-
-<h1>Personel Listesi</h1>
+<h1 class="page-title">@ViewData["Title"]</h1>
 
 <div class="mb-3">
     <!-- Personel Ekle butonu -->
-    <a asp-action="Create" class="btn btn-success">Personel Ekle</a>
+    <a asp-action="Create" class="btn btn-success add-button">Personel Ekle</a>
 </div>
 
-<table class="table">
-    <thead>
+<table class="table table-striped table-bordered">
+    <thead class="table-header">
         <tr>
             <th>Ad</th>
             <th>Soyad</th>
@@ -43,11 +42,134 @@
                 <td>@personel.CalistigiSaat</td>
                 <td>@personel.GunlukKazandirdigiPara</td>
                 <td>
-                    <!-- Düzenle ve Sil butonları -->
+                <td>
                     <a asp-action="Edit" asp-route-id="@personel.Id" class="btn btn-primary">Düzenle</a>
                     <a asp-action="Delete" asp-route-id="@personel.Id" class="btn btn-danger">Sil</a>
+                </td>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+
+<script>
+    document.getElementById('deleteButton').addEventListener('click', () => {
+        const id = document.getElementById('deleteButton').getAttribute('data-id');
+
+        // Anti-forgery token'ı sayfaya yerleştirdiğinizi varsayalım
+        const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+        fetch(/api/Personel/${id}, {
+            method: 'DELETE',
+            headers: {
+                'RequestVerificationToken': token, // Veya X-CSRF-Token
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                alert("Silme sırasında hata oluştu");
+            }
+            return response.text();
+        })
+        .then(data => {
+            console.log(data);
+            alert("Silindi");
+            window.location.href = '/api/Personel';
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    });
+</script>
+
+
+<style>
+    body {
+        background-color: #fff;
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 40px 0;
+    }
+
+    .page-title {
+        text-align: center;
+        font-size: 32px;
+        color: #2c3e50;
+        margin-bottom: 30px;
+    }
+
+    .add-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        text-align: center;
+    }
+
+        .add-button:hover {
+            background-color: #218838;
+        }
+
+    /* Tablo düzeni */
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        background-color: #f8f9fa;
+        border-collapse: collapse;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .table th, .table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+    .table-header {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* Butonlar için stiller */
+    .action-button {
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: all 0.3s;
+        margin: 0 5px;
+    }
+
+        .action-button:hover {
+            opacity: 0.8;
+        }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+        border: none;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+</style>

@@ -1,1 +1,147 @@
-[]
+[
+  {
+    "ContainingType": "WebApplication7.Controllers.PersonelController",
+    "Method": "Index",
+    "RelativePath": "api/Personel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.PersonelController",
+    "Method": "Create",
+    "RelativePath": "api/Personel/Create",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.PersonelController",
+    "Method": "Create",
+    "RelativePath": "api/Personel/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Soyad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CalistigiSaat",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "GunlukKazandirdigiPara",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.PersonelController",
+    "Method": "Delete",
+    "RelativePath": "api/Personel/Delete/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.PersonelController",
+    "Method": "DeleteConfirmed",
+    "RelativePath": "api/Personel/Delete/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.PersonelController",
+    "Method": "Edit",
+    "RelativePath": "api/Personel/Edit/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.PersonelController",
+    "Method": "Edit",
+    "RelativePath": "api/Personel/Edit/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Soyad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CalistigiSaat",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "GunlukKazandirdigiPara",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

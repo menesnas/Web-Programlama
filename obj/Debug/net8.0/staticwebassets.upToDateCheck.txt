@@ -1,12 +1,14 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\haarcascade_frontalface_default.xml
 wwwroot\images\Bakımlısakal.jpeg
+wwwroot\images\ciltbakım.jpeg
+wwwroot\images\images.jpg
 wwwroot\images\images1.jpeg
 wwwroot\images\images2.jpeg
 wwwroot\images\images3.jpeg
 wwwroot\images\sacbakim.jpeg
 wwwroot\images\sackesim.jpeg
+wwwroot\images\sacmasaj.jpeg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
@@ -65,3 +67,4 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\mask.png

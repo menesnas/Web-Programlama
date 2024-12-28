@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\menes\\OneDrive\\Masaüstü\\WebApplication7\\WebApplication7\\WebApplication7\\WebApplication7.csproj": {}
+    "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\WEBSON\\Web-Programlama\\WebApplication7.csproj": {}
   },
   "projects": {
-    "C:\\Users\\menes\\OneDrive\\Masaüstü\\WebApplication7\\WebApplication7\\WebApplication7\\WebApplication7.csproj": {
+    "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\WEBSON\\Web-Programlama\\WebApplication7.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\menes\\OneDrive\\Masaüstü\\WebApplication7\\WebApplication7\\WebApplication7\\WebApplication7.csproj",
+        "projectUniqueName": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\WEBSON\\Web-Programlama\\WebApplication7.csproj",
         "projectName": "WebApplication7",
-        "projectPath": "C:\\Users\\menes\\OneDrive\\Masaüstü\\WebApplication7\\WebApplication7\\WebApplication7\\WebApplication7.csproj",
-        "packagesPath": "C:\\Users\\menes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\menes\\OneDrive\\Masaüstü\\WebApplication7\\WebApplication7\\WebApplication7\\obj\\",
+        "projectPath": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\WEBSON\\Web-Programlama\\WebApplication7.csproj",
+        "packagesPath": "C:\\Users\\90531\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\90531\\OneDrive - ogr.sakarya.edu.tr\\Masaüstü\\WEBSON\\Web-Programlama\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\menes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\90531\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,7 +42,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -68,21 +68,9 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
-            "OpenCvSharp4": {
-              "target": "Package",
-              "version": "[4.10.0.20241108, )"
-            },
-            "OpenCvSharp4.runtime.win": {
-              "target": "Package",
-              "version": "[4.10.0.20241108, )"
-            },
             "SixLabors.ImageSharp": {
               "target": "Package",
-              "version": "[3.1.5, )"
-            },
-            "SixLabors.ImageSharp.Drawing": {
-              "target": "Package",
-              "version": "[2.1.4, )"
+              "version": "[3.1.6, )"
             }
           },
           "imports": [
@@ -104,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -62,10 +62,16 @@ namespace WebApplication7.Controllers
 
             if (action == "generate")
             {
+                // Resim dosyasının yüklendiğini kontrol et
+                if (Request.Form.Files["ResimDosyasi"] == null || Request.Form.Files["ResimDosyasi"].Length == 0)
+                {
+                    ModelState.AddModelError("ResimDosyasi", "Lütfen bir resim dosyası yükleyin.");
+                    return View(viewModel); // Form tekrar gösterilir
+                }
                 try
                 {
                     var apiKey = ""; // Burada kendi API anahtarınızı kullanın.
-                    var prompt = "Add a modern hairstyle to the same face by changing the hair of the face in the given image.";
+                    var prompt = "Generate three separate photorealistic images of the same face, each featuring a different modern hairstyle (e.g., a fade, a slick back, and a quiff). Maintain the same facial features and lighting in each image, and only change the hair style.";
 
                     Console.WriteLine("DALL-E API çağrısı başlatılıyor...");
                     using (var client = new HttpClient())
@@ -118,24 +124,69 @@ namespace WebApplication7.Controllers
             }
             else if (action == "add")
             {
-                // Rezervasyon ekleme işlemleri
-                Console.WriteLine("Rezervasyon ekleme işlemi başlatıldı...");
-                // Burada gerekli kodlar yer alacak.
-            }
+                // Personelin mevcut rezervasyonlarını kontrol et
+                var personelRezervasyonlari = _context.Rezervasyonlar
+                    .Where(r => r.PersonelId == viewModel.Rezervasyon.PersonelId)
+                    .Select(r => r.Tarih)
+                    .ToList();
 
+                var yeniRezervasyonSaati = viewModel.Rezervasyon.Tarih;
+                bool uygunMu = personelRezervasyonlari.All(tarih =>
+                    yeniRezervasyonSaati >= tarih.AddHours(1) || yeniRezervasyonSaati < tarih);
+
+                // Rezervasyon ekleme butonuna basıldı.
+                // Validasyonlar
+                if (viewModel.Rezervasyon.PersonelId == 0)
+                {
+                    ModelState.AddModelError("Rezervasyon.PersonelId", "Lütfen bir personel seçin.");
+                    return View(viewModel);
+                }
+                else if (viewModel.Rezervasyon.SacModeliId == 0)
+                {
+                    ModelState.AddModelError("Rezervasyon.SacModeliId", "Lütfen bir saç modeli seçin.");
+                    return View(viewModel);
+                }
+                if (!uygunMu)
+                {
+                    ModelState.AddModelError("Rezervasyon.Tarih", "Seçilen personelin bu saatte rezervasyonu var. En erken 1 saat sonrası için rezervasyon yapılabilir.");
+                    return View(viewModel);
+                }
+                else
+                {
+                    // Rezervasyon ekleme işlemi
+                    _context.Rezervasyonlar.Add(viewModel.Rezervasyon);
+
+                    // Personelin çalışma saati ve ücret güncellemesi
+                    var personel = _context.Personeller.FirstOrDefault(p => p.Id == viewModel.Rezervasyon.PersonelId);
+                    var sacModeli = _context.SacModelleri.FirstOrDefault(s => s.Id == viewModel.Rezervasyon.SacModeliId);
+
+                    if (personel != null && sacModeli != null)
+                    {
+                        personel.CalistigiSaat += 1;
+                        personel.GunlukKazandirdigiPara += sacModeli.Ucret;
+                    }
+
+                    await _context.SaveChangesAsync();
+
+                    return RedirectToAction("Index");
+                }
+
+            }
+            // Varsayılan durum
+            ModelState.AddModelError("", "Geçersiz işlem.");
             return View(viewModel);
         }
+    }
 
-        public class ImageGenerationResponse
-        {
-            [JsonPropertyName("data")]
-            public List<ImageData> Data { get; set; }
-        }
+    public class ImageGenerationResponse
+    {
+        [JsonPropertyName("data")]
+        public List<ImageData> Data { get; set; }
+    }
 
-        public class ImageData
-        {
-            [JsonPropertyName("url")]
-            public string Url { get; set; }
-        }
+    public class ImageData
+    {
+        [JsonPropertyName("url")]
+        public string Url { get; set; }
     }
 }

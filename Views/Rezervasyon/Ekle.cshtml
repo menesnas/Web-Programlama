@@ -1,5 +1,6 @@
 ﻿@model WebApplication7.Models.RezervasyonViewModel
 
+
 <h2>Yeni Rezervasyon Ekle</h2>
 
 <form asp-action="Ekle" asp-controller="Rezervasyon" method="post" enctype="multipart/form-data">
@@ -16,6 +17,7 @@
     <div>
         <label for="Tarih">Tarih</label>
         <input type="datetime-local" id="Tarih" name="Rezervasyon.Tarih" value="@Model.Rezervasyon.Tarih.ToString("yyyy-MM-ddTHH:mm")" required />
+        @Html.ValidationMessageFor(model => model.Rezervasyon.Tarih, "", new { @class = "text-danger" })
     </div>
 
     <div>
@@ -76,11 +78,12 @@
 
     <div>
         <label for="ResimDosyasi">Fotoğraf Yükle</label>
-        <input type="file" id="ResimDosyasi" name="ResimDosyasi" accept="image/*" required />
+        <input type="file" id="ResimDosyasi" name="ResimDosyasi" accept="image/*" />
+        @Html.ValidationMessage("ResimDosyasi", "", new { @class = "text-danger" })
+
     </div>
 
     <div>
-        <input type="hidden" name="action" value="generate" />
         <button type="submit" name="action" value="generate">Fotoğraf Üret</button>
         <button type="submit" name="action" value="add">Rezervasyon Ekle</button>
     </div>
@@ -163,7 +166,12 @@
         border-radius: 5px;
     }
 
-        .btn-back:hover {
-            background-color: #45a049;
-        }
+    .text-danger {
+        color: red;
+        font-size: 14px;
+    }
+
+    .btn-back:hover {
+        background-color: #45a049;
+    }
 </style>
